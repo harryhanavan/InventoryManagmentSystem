@@ -1,0 +1,4 @@
+UserID,Username,Password,Role
+1,Admin,Admin,Administrator
+2,User1,Password1,Sales
+3,User2,Password2,InventoryManager
