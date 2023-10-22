@@ -23,22 +23,33 @@ namespace InventoryManagementSystem
             List<Product> products = Product.LoadProducts();
 
             // Get and validate inputs (you might want to add more validation here)
-            int productId = int.Parse(txtProductID.Text); // Make sure this is a numeric value
             string name = txtProductName.Text;
             string description = txtProductDescription.Text;
 
-            // Assuming category is selected from a ComboBox
-            string category = comboBox1.SelectedItem.ToString();
-
-            int quantity;
-            decimal price;
-            int supplierId;
-
-            if (!int.TryParse(txtProductQuantity.Text, out quantity) || !decimal.TryParse(txtProductPrice.Text, out price) || !int.TryParse(txtSupplierId.Text, out supplierId))
+            // Check for Empty Fields
+            if (string.IsNullOrWhiteSpace(txtProductID.Text) ||
+                string.IsNullOrWhiteSpace(txtProductName.Text) ||
+                string.IsNullOrWhiteSpace(txtProductDescription.Text) ||
+                cmbCategory.SelectedItem == null ||
+                string.IsNullOrWhiteSpace(txtProductQuantity.Text) ||
+                string.IsNullOrWhiteSpace(txtProductPrice.Text))
             {
-                MessageBox.Show("Please enter valid numbers for quantity, price, and supplier ID.");
+                MessageBox.Show("Please fill in all fields.");
                 return;
             }
+
+            // 2. Validate Numerical Values
+            if (!int.TryParse(txtProductID.Text, out int productId) || 
+                !int.TryParse(txtProductQuantity.Text, out int quantity) ||
+                !decimal.TryParse(txtProductPrice.Text, out decimal price) ||
+                !int.TryParse(txtSupplierId.Text, out int supplierId))
+            {
+                MessageBox.Show("Please enter valid numerical values for Product ID, Quantity, Price, and Supplier ID.");
+                return;
+            }
+
+            // 3. Category Selection
+            string category = cmbCategory.SelectedItem.ToString();
 
             // Create and add the product
             Product newProduct = new Product(productId, name, description, (ProductCategory)Enum.Parse(typeof(ProductCategory), category), quantity, price, supplierId);

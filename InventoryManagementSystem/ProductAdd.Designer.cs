@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnAddProduct = new Button();
-            comboBox1 = new ComboBox();
+            cmbCategory = new ComboBox();
             lblProductCategory = new Label();
             lblProductQuantity = new Label();
             lblProductPrice = new Label();
@@ -56,13 +56,14 @@
             btnAddProduct.UseVisualStyleBackColor = true;
             btnAddProduct.Click += btnAddProduct_Click;
             // 
-            // comboBox1
+            // cmbCategory
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(406, 272);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 24;
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Items.AddRange(new object[] { "Electronics", "Clothes", "Grocery" });
+            cmbCategory.Location = new Point(406, 272);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(121, 23);
+            cmbCategory.TabIndex = 24;
             // 
             // lblProductCategory
             // 
@@ -187,7 +188,7 @@
             Controls.Add(txtSupplierId);
             Controls.Add(btnCancel);
             Controls.Add(btnAddProduct);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbCategory);
             Controls.Add(lblProductCategory);
             Controls.Add(lblProductQuantity);
             Controls.Add(lblProductPrice);
@@ -208,7 +209,7 @@
         #endregion
 
         private Button btnAddProduct;
-        private ComboBox comboBox1;
+        private ComboBox cmbCategory;
         private Label lblProductCategory;
         private Label lblProductQuantity;
         private Label lblProductPrice;
