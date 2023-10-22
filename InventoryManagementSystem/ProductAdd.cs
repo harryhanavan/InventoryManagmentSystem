@@ -52,7 +52,7 @@ namespace InventoryManagementSystem
             string category = cmbCategory.SelectedItem.ToString();
 
             // Create and add the product
-            Product newProduct = new Product(productId, name, description, (ProductCategory)Enum.Parse(typeof(ProductCategory), category), quantity, price, supplierId);
+            Product newProduct = new Product(productId, name, description, (ProductCategory)Enum.Parse(typeof(ProductCategory), category), price, quantity, supplierId);
 
             // Add the new product to the list
             bool success = Product.AddProduct(newProduct, products);

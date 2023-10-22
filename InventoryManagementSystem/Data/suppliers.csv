@@ -1,3 +1,8 @@
-SupplierID,Name,ContactInfo
-1,TechSupplier,techsupplier@example.com
-2,FashionFiesta,fashionfiesta@example.com
+SupplierID,Name,EmailAddress,PhoneNumber,Category,Address
+1,HP Suppliers,hp@example.com,123-456-7890,Computers and Accessories,1 Tech St, Sydney
+2,Apple Inc.,apple@example.com,234-567-8901,Smartphones and Wearables,2 Infinite Loop, Melbourne
+3,Samsung,samsung@example.com,345-678-9012,Electronics,3 Galaxy Rd, Brisbane
+4,Anker Technologies,anker@example.com,456-789-0123,Accessories,4 Battery Ln, Adelaide
+5,Sony Electronics,sony@example.com,567-890-1234,Audio and Headphones,5 Sound Ave, Perth
+6,Dell Inc.,dell@example.com,678-901-2345,Computers,6 Inspiron Blvd, Darwin
+7,Fitbit,fitbit@example.com,789-012-3456,Wearables,7 Fitness St, Hobart

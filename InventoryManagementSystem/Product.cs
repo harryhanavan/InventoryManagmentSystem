@@ -8,9 +8,12 @@ namespace InventoryManagementSystem
 {
     public enum ProductCategory
     {
-        Electronics,
-        Clothing,
-        Groceries,
+        Laptop,
+        Smartphone,
+        Tablet,
+        Accessories,
+        Audio,
+        Wearables
         // Add more categories as needed
     }
     internal class Product
@@ -27,7 +30,7 @@ namespace InventoryManagementSystem
         private static string productsFilePath = Path.Combine(dataDirectory, "products.csv");
 
         public Product(int productId, string name, string description, ProductCategory category,
-                       int quantity, decimal price, int supplierId)
+                       decimal price,int quantity, int supplierId)
         {
             ProductID = productId;
             Name = name;
@@ -108,12 +111,8 @@ namespace InventoryManagementSystem
         }
         public static List<Product> LoadProducts()
         {
-            return LoadProducts(productsFilePath);
-        }
-        public static List<Product> LoadProducts(string filePath)
-        {
             List<Product> products = new List<Product>();
-            List<string[]> data = FileManager.ReadData(filePath);
+            List<string[]> data = FileManager.ReadData(productsFilePath);
 
             foreach (var record in data.Skip(1)) // Skipping the header
             {

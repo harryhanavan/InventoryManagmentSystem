@@ -1,3 +1,11 @@
-1,Laptop,Dell Latitude 5520,Electronics,10,1000,1
-2,T-shirt,Cotton Size: M,Clothing,50,20,2
-1,gfdh,dsf,Electronics,4,40,3
+ProductID,Name,Description,Category,Price,Quantity,SupplierID
+1001,HP Envy x360,Laptop with Intel i5 processor,Laptop,899.99,10,1
+1002,iPhone 13,Smartphone with A15 Bionic chip,Smartphone,799.99,20,2
+1003,Samsung Galaxy Tab S7,Android Tablet,Tablet,649.99,15,3
+1004,Logitech Mouse,Wireless Mouse,Accessories,29.99,50,4
+1005,Sony WH-1000XM4,Noise Cancelling Headphones,Audio,349.99,10,5
+1006,Apple Watch Series 7,Smartwatch,Wearables,399.99,10,2
+1007,Dell XPS 13,Laptop with Intel i7 processor,Laptop,1199.99,5,6
+1008,Anker USB-C Charger,30W USB-C Charger,Accessories,19.99,30,4
+1009,JBL Flip 5,Bluetooth Speaker,Audio,119.99,10,5
+1010,Fitbit Charge 5,Fitness Tracker,Wearables,179.99,15,7

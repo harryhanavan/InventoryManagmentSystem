@@ -31,6 +31,7 @@
             btnAddForm = new Button();
             btnDeleteForm = new Button();
             btnEditForm = new Button();
+            btnViewProducts = new Button();
             SuspendLayout();
             // 
             // btnAddForm
@@ -45,7 +46,7 @@
             // 
             // btnDeleteForm
             // 
-            btnDeleteForm.Location = new Point(543, 160);
+            btnDeleteForm.Location = new Point(537, 160);
             btnDeleteForm.Name = "btnDeleteForm";
             btnDeleteForm.Size = new Size(121, 23);
             btnDeleteForm.TabIndex = 1;
@@ -63,11 +64,22 @@
             btnEditForm.UseVisualStyleBackColor = true;
             btnEditForm.Click += btnEditForm_Click;
             // 
+            // btnViewProducts
+            // 
+            btnViewProducts.Location = new Point(135, 160);
+            btnViewProducts.Name = "btnViewProducts";
+            btnViewProducts.Size = new Size(142, 23);
+            btnViewProducts.TabIndex = 3;
+            btnViewProducts.Text = "View Products";
+            btnViewProducts.UseVisualStyleBackColor = true;
+            btnViewProducts.Click += btnViewProducts_Click;
+            // 
             // ProductManagementForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnViewProducts);
             Controls.Add(btnEditForm);
             Controls.Add(btnDeleteForm);
             Controls.Add(btnAddForm);
@@ -82,5 +94,6 @@
         private Button btnAddForm;
         private Button btnDeleteForm;
         private Button btnEditForm;
+        private Button btnViewProducts;
     }
 }

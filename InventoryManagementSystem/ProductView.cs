@@ -27,8 +27,6 @@ namespace InventoryManagementSystem
             {
                 // Load products from the data source
                 List<Product> products = Product.LoadProducts();
-
-
                 // Bind the products to the DataGridView
                 dataGridViewProducts.DataSource = products;
 
