@@ -24,6 +24,7 @@ namespace InventoryManagementSystem
             // Open the Product Management Form
             ProductManagementForm productManagementForm = new ProductManagementForm();
             productManagementForm.Show();
+            this.Hide();
         }
 
         private void btnManageSuppliers_Click(object sender, EventArgs e)

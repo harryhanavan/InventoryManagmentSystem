@@ -46,8 +46,7 @@ namespace InventoryManagementSystem
             {
                 products.Add(product);
 
-                List<string[]> data = products.Select(p => p.ToCSV()).ToList();
-                FileManager.WriteData(productsFilePath, data); // Save changes to CSV
+                FileManager.WriteDataProduct(productsFilePath, products); // Save changes to CSV
 
                 return true;
             }
@@ -58,8 +57,8 @@ namespace InventoryManagementSystem
             }
         }
         public static bool EditProduct(int productId, string newName, string newDescription,
-                       ProductCategory newCategory, int newQuantity,
-                       decimal newPrice, int newSupplierId, List<Product> products)
+                       ProductCategory newCategory,decimal newPrice, int newQuantity,
+                       int newSupplierId, List<Product> products)
         {
             try
             {
@@ -73,8 +72,7 @@ namespace InventoryManagementSystem
                     product.Price = newPrice;
                     product.SupplierID = newSupplierId;
 
-                    List<string[]> data = products.Select(p => p.ToCSV()).ToList();
-                    FileManager.WriteData(productsFilePath, data); // Save changes to CSV
+                    FileManager.WriteDataProduct(productsFilePath, products); // Save changes to CSV
 
                     return true;
                 }
@@ -96,8 +94,8 @@ namespace InventoryManagementSystem
                 {
                     products.Remove(product);
 
-                    List<string[]> data = products.Select(p => p.ToCSV()).ToList();
-                    FileManager.WriteData(productsFilePath, data); // Save changes to CSV
+
+                    FileManager.WriteDataProduct(productsFilePath, products); // Save changes to CSV
 
                     return true;
                 }
@@ -109,6 +107,8 @@ namespace InventoryManagementSystem
                 return false;
             }
         }
+        
+
         public static List<Product> LoadProducts()
         {
             List<Product> products = new List<Product>();
@@ -129,6 +129,10 @@ namespace InventoryManagementSystem
 
             return products;
         }
+        public override string ToString()
+        {
+            return $"{ProductID} - {Name}";
+        }
         public string[] ToCSV()
         {
             return new string[]
@@ -137,8 +141,8 @@ namespace InventoryManagementSystem
                  Name,
                  Description,
                  Category.ToString(),
-                 Quantity.ToString(),
                  Price.ToString(),
+                 Quantity.ToString(),
                  SupplierID.ToString()
             };
         }

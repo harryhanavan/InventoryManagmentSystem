@@ -37,6 +37,7 @@ namespace InventoryManagementSystem
             {
                 using (StreamWriter writer = new StreamWriter(filePath, false))
                 {
+                    writer.WriteLine("ProductID,Name,Description,Category,Price,Quantity,SupplierID");
                     foreach (var record in data)
                     {
                         writer.WriteLine(string.Join(",", record));
@@ -49,6 +50,27 @@ namespace InventoryManagementSystem
             {
                 Console.WriteLine($"An error occurred while writing to the file: {ex.Message}");
                 return false;
+            }
+        }
+        public static void WriteDataProduct(string filePath, List<Product> products)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(filePath))
+                {
+                    // Writing headers
+                    sw.WriteLine("ProductID,Name,Description,Category,Price,Quantity,SupplierID");
+
+                    // Writing data
+                    foreach (var product in products)
+                    {
+                        sw.WriteLine(string.Join(",", product.ToCSV()));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while writing data to the file: {ex.Message}");
             }
         }
     }

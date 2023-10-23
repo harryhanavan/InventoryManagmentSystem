@@ -16,6 +16,8 @@ namespace InventoryManagementSystem
         public ProductAdd()
         {
             InitializeComponent();
+            cmbCategory.DataSource = Enum.GetValues(typeof(ProductCategory));
+
         }
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
@@ -39,7 +41,7 @@ namespace InventoryManagementSystem
             }
 
             // 2. Validate Numerical Values
-            if (!int.TryParse(txtProductID.Text, out int productId) || 
+            if (!int.TryParse(txtProductID.Text, out int productId) ||
                 !int.TryParse(txtProductQuantity.Text, out int quantity) ||
                 !decimal.TryParse(txtProductPrice.Text, out decimal price) ||
                 !int.TryParse(txtSupplierId.Text, out int supplierId))
