@@ -39,6 +39,7 @@
             label4 = new Label();
             cmbSupplier = new ComboBox();
             label5 = new Label();
+            btnback = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).BeginInit();
             SuspendLayout();
             // 
@@ -140,11 +141,22 @@
             label5.TabIndex = 10;
             label5.Text = "Search by Product ID or Name";
             // 
+            // btnback
+            // 
+            btnback.Location = new Point(681, 365);
+            btnback.Name = "btnback";
+            btnback.Size = new Size(75, 23);
+            btnback.TabIndex = 11;
+            btnback.Text = "Back";
+            btnback.UseVisualStyleBackColor = true;
+            btnback.Click += btnback_Click;
+            // 
             // ProductView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnback);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(cmbSupplier);
@@ -177,5 +189,6 @@
         private Label label4;
         private ComboBox cmbSupplier;
         private Label label5;
+        private Button btnback;
     }
 }

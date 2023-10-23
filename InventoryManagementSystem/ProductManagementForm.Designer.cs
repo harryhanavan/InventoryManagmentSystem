@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             btnAddForm = new Button();
-            btnDeleteForm = new Button();
             btnEditForm = new Button();
             btnViewProducts = new Button();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // btnAddForm
@@ -43,16 +43,6 @@
             btnAddForm.Text = "Add Product";
             btnAddForm.UseVisualStyleBackColor = true;
             btnAddForm.Click += btnAddForm_Click;
-            // 
-            // btnDeleteForm
-            // 
-            btnDeleteForm.Location = new Point(537, 160);
-            btnDeleteForm.Name = "btnDeleteForm";
-            btnDeleteForm.Size = new Size(121, 23);
-            btnDeleteForm.TabIndex = 1;
-            btnDeleteForm.Text = "Delete Product";
-            btnDeleteForm.UseVisualStyleBackColor = true;
-            btnDeleteForm.Click += btnDeleteForm_Click;
             // 
             // btnEditForm
             // 
@@ -74,14 +64,24 @@
             btnViewProducts.UseVisualStyleBackColor = true;
             btnViewProducts.Click += btnViewProducts_Click;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(273, 205);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(144, 23);
+            btnBack.TabIndex = 4;
+            btnBack.Text = "Back to Dashboard";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // ProductManagementForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBack);
             Controls.Add(btnViewProducts);
             Controls.Add(btnEditForm);
-            Controls.Add(btnDeleteForm);
             Controls.Add(btnAddForm);
             Name = "ProductManagementForm";
             Text = "ProductManagementForm";
@@ -92,8 +92,8 @@
         #endregion
 
         private Button btnAddForm;
-        private Button btnDeleteForm;
         private Button btnEditForm;
         private Button btnViewProducts;
+        private Button btnBack;
     }
 }

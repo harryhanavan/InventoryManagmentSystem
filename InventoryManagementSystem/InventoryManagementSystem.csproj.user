@@ -10,9 +10,6 @@
     <Compile Update="ProductAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ProductDelete.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ProductEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -37,9 +34,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Update="ProductAdd.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="ProductDelete.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Update="ProductEdit.resx">

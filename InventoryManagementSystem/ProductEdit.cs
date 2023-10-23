@@ -16,7 +16,9 @@ namespace InventoryManagementSystem
         public ProductEdit()
         {
             InitializeComponent();
+
             cmbProducts.SelectedIndexChanged += new EventHandler(productSelected);
+            
             // Populate the category ComboBox
             cmbCategory.DataSource = Enum.GetValues(typeof(ProductCategory));
         }
@@ -68,9 +70,18 @@ namespace InventoryManagementSystem
             cmbProducts.DisplayMember = "Name"; // Assuming you want to display the Name of the product in the ComboBox
             cmbProducts.ValueMember = "ProductID"; // Set the hidden value of ComboBox items to ProductID
         }
+        bool DelInProg = false;
         private void productSelected(object sender, EventArgs e)
         {
             Product selectedProduct = (Product)cmbProducts.SelectedItem;
+
+            if (selectedProduct == null && DelInProg == false)
+            {
+                // Only show the message if there are items in the ComboBox but none is selected
+                MessageBox.Show("No product selected.");
+                return;
+            }
+
             if (selectedProduct != null)
             {
                 txtProductID.Text = selectedProduct.ProductID.ToString();
@@ -81,22 +92,41 @@ namespace InventoryManagementSystem
                 txtProductQuantity.Text = selectedProduct.Quantity.ToString();
                 txtSupplierId.Text = selectedProduct.SupplierID.ToString();
             }
+        }
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            // User Confirmation
+            // Get the selected product
+            Product selectedProduct = (Product)cmbProducts.SelectedItem;
+            if (selectedProduct == null)
+            {
+                MessageBox.Show("No product selected.");
+                return;
+            }
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the selected product?",
+                                                       "Delete Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult != DialogResult.Yes) return;
+
+            DelInProg = true; // Set flag indicating deletion is in progress
+
+            // Delete the product and update the ComboBox
+            bool deleted = Product.DeleteProduct(selectedProduct.ProductID, Product.LoadProducts());
+            if (deleted)
+            {
+                cmbProducts.DataSource = null;
+                cmbProducts.DataSource = Product.LoadProducts();
+                cmbProducts.DisplayMember = "Name";
+                cmbProducts.ValueMember = "ProductID";
+
+                MessageBox.Show("Product deleted successfully!");
+            }
             else
             {
-                // Clearing the textboxes
-                txtProductID.Clear();
-                txtProductName.Clear();
-                txtProductDescription.Clear();
-                cmbCategory.SelectedItem = null; // Assuming you want to clear the ComboBox as well
-                txtProductPrice.Clear();
-                txtProductQuantity.Clear();
-                txtSupplierId.Clear();
-
-                // Showing a MessageBox
-                MessageBox.Show("No product found with the given name or ID.");
+                MessageBox.Show("An error occurred while deleting the product.");
             }
-        }
 
+            DelInProg = false; // Reset flag after deletion process
+        }
 
 
     }

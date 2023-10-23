@@ -46,7 +46,6 @@ C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSyst
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.Dashboard.resources
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.LoginForm.resources
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductAdd.resources
-C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductDelete.resources
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductEdit.resources
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductManagementForm.resources
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductView.resources

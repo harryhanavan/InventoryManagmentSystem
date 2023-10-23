@@ -86,8 +86,8 @@ namespace InventoryManagementSystem
             dataGridViewProducts.DataSource = filteredProducts;
             // Refresh the DataGridView to reflect changes
             dataGridViewProducts.Refresh();
-        
-    }
+
+        }
 
         // You can create a method to handle the price range filtering
         private bool PriceInRange(decimal price, string selectedPriceRange)
@@ -109,7 +109,9 @@ namespace InventoryManagementSystem
             }
         }
 
+        private void btnback_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

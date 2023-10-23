@@ -32,11 +32,12 @@
             SupMgmntBttn = new Button();
             SalesMgmntBttn = new Button();
             WelcomeLabel = new Label();
+            btnLogout = new Button();
             SuspendLayout();
             // 
             // ProdMgmntBttn
             // 
-            ProdMgmntBttn.Location = new Point(123, 103);
+            ProdMgmntBttn.Location = new Point(174, 175);
             ProdMgmntBttn.Name = "ProdMgmntBttn";
             ProdMgmntBttn.Size = new Size(141, 23);
             ProdMgmntBttn.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // SupMgmntBttn
             // 
-            SupMgmntBttn.Location = new Point(132, 152);
+            SupMgmntBttn.Location = new Point(321, 175);
             SupMgmntBttn.Name = "SupMgmntBttn";
             SupMgmntBttn.Size = new Size(150, 23);
             SupMgmntBttn.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // SalesMgmntBttn
             // 
-            SalesMgmntBttn.Location = new Point(180, 220);
+            SalesMgmntBttn.Location = new Point(477, 175);
             SalesMgmntBttn.Name = "SalesMgmntBttn";
             SalesMgmntBttn.Size = new Size(131, 23);
             SalesMgmntBttn.TabIndex = 2;
@@ -67,17 +68,28 @@
             // WelcomeLabel
             // 
             WelcomeLabel.AutoSize = true;
-            WelcomeLabel.Location = new Point(434, 180);
+            WelcomeLabel.Location = new Point(367, 157);
             WelcomeLabel.Name = "WelcomeLabel";
             WelcomeLabel.Size = new Size(60, 15);
             WelcomeLabel.TabIndex = 3;
             WelcomeLabel.Text = "Welcome:";
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(352, 204);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(88, 23);
+            btnLogout.TabIndex = 4;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnLogout);
             Controls.Add(WelcomeLabel);
             Controls.Add(SalesMgmntBttn);
             Controls.Add(SupMgmntBttn);
@@ -95,5 +107,6 @@
         private Button SupMgmntBttn;
         private Button SalesMgmntBttn;
         private Label WelcomeLabel;
+        private Button btnLogout;
     }
 }

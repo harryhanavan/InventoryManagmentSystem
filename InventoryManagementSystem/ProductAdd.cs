@@ -64,5 +64,10 @@ namespace InventoryManagementSystem
             else
                 MessageBox.Show("An error occurred while adding the product.");
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,7 +41,7 @@ namespace InventoryManagementSystem
                 MessageBox.Show("Incorrect username or password.");
                 return;
             }
-
+            User.CurrentUser.Add(user);
             // Login successful, proceed to the dashboard or appropriate form
             Dashboard dashboard = new Dashboard(user);
             dashboard.Show();

@@ -31,6 +31,7 @@ namespace InventoryManagementSystem
             Role = role;
         }
 
+        public static List<User> CurrentUser { get; private set; }
         public static bool Login(string username, string password, List<User> users)
         {
             try
