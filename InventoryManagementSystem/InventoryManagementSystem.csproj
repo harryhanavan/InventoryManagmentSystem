@@ -12,16 +12,4 @@
     <Folder Include="Product\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="SupplierAdd.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="SupplierAdd.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-
 </Project>

@@ -37,10 +37,17 @@ namespace InventoryManagementSystem
 
         private void btnManageSales_Click(object sender, EventArgs e)
         {
-            // Open the Sales Management Form
-            Main mainForm = (Main)this.ParentForm; // Getting reference to Main form
-            SalesManagementForm salesManagementForm = new SalesManagementForm();
-            mainForm.LoadUserControl(salesManagementForm);
+            if(User.CurrentUser.Role == UserRole.Administrator || User.CurrentUser.Role == UserRole.Sales)
+            {
+                // Open the Sales Management Form
+                Main mainForm = (Main)this.ParentForm; // Getting reference to Main form
+                SalesManagementForm salesManagementForm = new SalesManagementForm();
+                mainForm.LoadUserControl(salesManagementForm);
+            }
+            else
+            {
+                MessageBox.Show("You do not have permission to access this feature.");
+            }            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

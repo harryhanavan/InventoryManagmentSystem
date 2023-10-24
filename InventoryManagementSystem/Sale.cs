@@ -9,14 +9,16 @@ namespace InventoryManagementSystem
     internal class Sale
     {
         public int SaleID { get; private set; }
+        public int OrderID { get; set; }
         public int ProductID { get; set; }
         public int QuantitySold { get; set; }
         public DateTime Date { get; set; }
         public decimal TotalAmount { get; set; }
 
-        public Sale(int saleId, int productId, int quantitySold, DateTime date, decimal totalAmount)
+        public Sale(int saleId, int orderId,int productId, int quantitySold, DateTime date, decimal totalAmount)
         {
             SaleID = saleId;
+            OrderID = orderId;
             ProductID = productId;
             QuantitySold = quantitySold;
             Date = date;
