@@ -31,7 +31,8 @@ namespace InventoryManagementSystem
             Role = role;
         }
 
-        public static List<User> CurrentUser { get; private set; }
+        public static User CurrentUser { get; set; }
+        
         public static bool Login(string username, string password, List<User> users)
         {
             try
@@ -39,6 +40,7 @@ namespace InventoryManagementSystem
                 User user = users.FirstOrDefault(u => u.Username == username && u.Password == password);
                 if (user != null)
                 {
+                    CurrentUser = user;
                     Console.WriteLine($"Welcome, {username}!");
                     return true;
                 }
@@ -60,8 +62,8 @@ namespace InventoryManagementSystem
         }
         public static void Logout()
         {
+            CurrentUser = null;
             Console.WriteLine("You have been logged out.");
-            // You might want to add more functionality here, like clearing user sessions or redirecting to the login page.
         }
         public static List<User> LoadUsers()
         {
@@ -71,7 +73,6 @@ namespace InventoryManagementSystem
         {
             List<User> users = new List<User>();
             List<string[]> data = FileManager.ReadData(filePath);
-            Console.WriteLine($"Number of records loaded: {data.Count - 1}"); // -1 to exclude header
             foreach (var record in data.Skip(1)) // Skipping the header
             {
                 User newUser = new User(
@@ -81,7 +82,6 @@ namespace InventoryManagementSystem
                     role: (UserRole)Enum.Parse(typeof(UserRole), record[3])
                 );
                 users.Add(newUser);
-                Console.WriteLine($"Loaded user: {newUser.Username}"); // Outputting usernames
             }
 
             return users;

@@ -12,11 +12,12 @@ namespace InventoryManagementSystem
         public string Name { get; set; }
         public string EmailAddress { get; set; }
         public string PhoneNumber { get; set; }
-        public string Category { get; set; } // Updated to Category from ContactInfo
-        public string Address { get; set; } // Street Number, Name and State
+        public string Category { get; set; } // Updated to Category
+        public string Address { get; set; } // Street Number, Name
+        public string City { get; set; }
         private static string dataDirectory = "../../../Data/";
         private static string suppliersFilePath = Path.Combine(dataDirectory, "suppliers.csv");
-        public Supplier(int supplierId, string name, string emailAddress, string phoneNumber, string category, string address)
+        public Supplier(int supplierId, string name, string emailAddress, string phoneNumber, string category, string address, string city)
         {
             SupplierID = supplierId;
             Name = name;
@@ -24,6 +25,7 @@ namespace InventoryManagementSystem
             PhoneNumber = phoneNumber;
             Category = category;
             Address = address;
+            City = city;
         }
 
         public static bool AddSupplier(Supplier supplier, List<Supplier> suppliers)
@@ -42,7 +44,7 @@ namespace InventoryManagementSystem
             }
         }
         public static bool EditSupplier(int supplierId, string newName, string newEmailAddress,
-            string newPhoneNumber, string newCategory, string newAddress, List<Supplier> suppliers)
+            string newPhoneNumber, string newCategory, string newAddress, string newCity, List<Supplier> suppliers)
         {
             try
             {
@@ -54,6 +56,7 @@ namespace InventoryManagementSystem
                     supplier.PhoneNumber = newPhoneNumber;
                     supplier.Category = newCategory;
                     supplier.Address = newAddress;
+                    supplier.City = newCity;
 
                     List<string[]> data = suppliers.Select(s => s.ToCSV()).ToList();
                     FileManager.WriteData(suppliersFilePath, data); // Save changes to CSV
@@ -102,7 +105,8 @@ namespace InventoryManagementSystem
                     emailAddress: record[2],
                     phoneNumber: record[3],
                     category: record[4],
-                    address: record[5]
+                    address: record[5],
+                    city: record[6]
                 ));
             }
 
@@ -118,7 +122,8 @@ namespace InventoryManagementSystem
             EmailAddress,
             PhoneNumber,
             Category,
-            Address
+            Address,
+            City
             };
         }
 

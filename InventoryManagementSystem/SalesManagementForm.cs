@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace InventoryManagementSystem
 {
-    public partial class SalesManagementForm : Form
+    public partial class SalesManagementForm : UserControl
     {
         public SalesManagementForm()
         {
@@ -19,7 +19,18 @@ namespace InventoryManagementSystem
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            Main mainForm = (Main)this.ParentForm;
+            User currentUser = User.CurrentUser;
+            if (currentUser != null)
+            {
+                Dashboard dashboard = new Dashboard(currentUser);
+                mainForm.LoadUserControl(dashboard);
+            }
+            else
+            {
+                LoginForm loginForm = new LoginForm();
+                mainForm.LoadUserControl(loginForm);
+            }
         }
     }
 }

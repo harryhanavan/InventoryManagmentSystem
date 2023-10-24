@@ -69,7 +69,6 @@ C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementS
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.Dashboard.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.LoginForm.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductAdd.resources
-C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductDelete.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductEdit.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductManagementForm.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductView.resources
@@ -85,3 +84,5 @@ C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementS
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.pdb
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.genruntimeconfig.cache
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\ref\InventoryManagementSystem.dll
+C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierView.resources
+C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.Main.resources

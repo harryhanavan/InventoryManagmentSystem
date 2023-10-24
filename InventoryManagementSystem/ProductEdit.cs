@@ -11,14 +11,14 @@ using System.Xml.Linq;
 
 namespace InventoryManagementSystem
 {
-    public partial class ProductEdit : Form
+    public partial class ProductEdit : UserControl
     {
         public ProductEdit()
         {
             InitializeComponent();
 
             cmbProducts.SelectedIndexChanged += new EventHandler(productSelected);
-            
+
             // Populate the category ComboBox
             cmbCategory.DataSource = Enum.GetValues(typeof(ProductCategory));
         }
@@ -128,6 +128,11 @@ namespace InventoryManagementSystem
             DelInProg = false; // Reset flag after deletion process
         }
 
-
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Main mainForm = (Main)ParentForm;
+            ProductManagementForm productManagementForm = new ProductManagementForm();
+            mainForm.LoadUserControl(productManagementForm);
+        }
     }
 }

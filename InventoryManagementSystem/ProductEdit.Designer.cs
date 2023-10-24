@@ -41,7 +41,7 @@
             txtProductPrice = new TextBox();
             txtProductName = new TextBox();
             lblProductID = new Label();
-            btnCancel = new Button();
+            btnBack = new Button();
             label1 = new Label();
             txtSearch = new TextBox();
             btnSearch = new Button();
@@ -158,14 +158,15 @@
             lblProductID.TabIndex = 26;
             lblProductID.Text = "Product ID";
             // 
-            // btnCancel
+            // btnBack
             // 
-            btnCancel.Location = new Point(517, 302);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(95, 23);
-            btnCancel.TabIndex = 39;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnBack.Location = new Point(580, 363);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(95, 23);
+            btnBack.TabIndex = 39;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnCancel_Click;
             // 
             // label1
             // 
@@ -180,7 +181,7 @@
             // txtSearch
             // 
             txtSearch.Location = new Point(172, 127);
-            txtSearch.Margin = new Padding(2, 2, 2, 2);
+            txtSearch.Margin = new Padding(2);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(129, 23);
             txtSearch.TabIndex = 41;
@@ -188,7 +189,7 @@
             // btnSearch
             // 
             btnSearch.Location = new Point(318, 125);
-            btnSearch.Margin = new Padding(2, 2, 2, 2);
+            btnSearch.Margin = new Padding(2);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(78, 20);
             btnSearch.TabIndex = 42;
@@ -216,14 +217,14 @@
             // 
             cmbProducts.FormattingEnabled = true;
             cmbProducts.Location = new Point(46, 158);
-            cmbProducts.Margin = new Padding(2, 2, 2, 2);
+            cmbProducts.Margin = new Padding(2);
             cmbProducts.Name = "cmbProducts";
             cmbProducts.Size = new Size(350, 23);
             cmbProducts.TabIndex = 45;
             // 
             // btnDeleteProduct
             // 
-            btnDeleteProduct.Location = new Point(578, 331);
+            btnDeleteProduct.Location = new Point(526, 302);
             btnDeleteProduct.Name = "btnDeleteProduct";
             btnDeleteProduct.Size = new Size(95, 23);
             btnDeleteProduct.TabIndex = 46;
@@ -235,7 +236,6 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(btnDeleteProduct);
             Controls.Add(cmbProducts);
             Controls.Add(lblProductSupID);
@@ -243,7 +243,7 @@
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
             Controls.Add(label1);
-            Controls.Add(btnCancel);
+            Controls.Add(btnBack);
             Controls.Add(btnSaveProduct);
             Controls.Add(cmbCategory);
             Controls.Add(lblProductCategory);
@@ -258,7 +258,7 @@
             Controls.Add(txtProductName);
             Controls.Add(lblProductID);
             Name = "ProductEdit";
-            Text = "ProductEdit";
+            Size = new Size(800, 450);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -278,7 +278,7 @@
         private TextBox txtProductPrice;
         private TextBox txtProductName;
         private Label lblProductID;
-        private Button btnCancel;
+        private Button btnBack;
         private Label label1;
         private TextBox txtSearch;
         private Button btnSearch;

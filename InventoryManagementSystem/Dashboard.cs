@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace InventoryManagementSystem
 {
-    public partial class Dashboard : Form
+    public partial class Dashboard : UserControl
     {
         private User loggedInUser;
         public Dashboard(User user)
@@ -22,32 +22,36 @@ namespace InventoryManagementSystem
         private void btnManageProducts_Click(object sender, EventArgs e)
         {
             // Open the Product Management Form
+            Main mainForm = (Main)this.ParentForm; // Getting reference to Main form
             ProductManagementForm productManagementForm = new ProductManagementForm();
-            productManagementForm.Show();
-            this.Hide();
+            mainForm.LoadUserControl(productManagementForm);
         }
 
         private void btnManageSuppliers_Click(object sender, EventArgs e)
         {
             // Open the Supplier Management Form
+            Main mainForm = (Main)this.ParentForm; // Getting reference to Main form
             SupplierManagementForm supplierManagementForm = new SupplierManagementForm();
-            supplierManagementForm.Show();
+            mainForm.LoadUserControl(supplierManagementForm);
         }
 
         private void btnManageSales_Click(object sender, EventArgs e)
         {
             // Open the Sales Management Form
+            Main mainForm = (Main)this.ParentForm; // Getting reference to Main form
             SalesManagementForm salesManagementForm = new SalesManagementForm();
-            salesManagementForm.Show();
+            mainForm.LoadUserControl(salesManagementForm);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            // Logout and return to the Login Form
+            // Logout
             User.Logout();
+
+            // Get reference to the parent form or container
+            Main mainForm = (Main)this.ParentForm;
             LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Close();
+            mainForm.LoadUserControl(loginForm);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)

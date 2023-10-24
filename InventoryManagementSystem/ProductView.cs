@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace InventoryManagementSystem
 {
-    public partial class ProductView : Form
+    public partial class ProductView : UserControl
     {
         public ProductView()
         {
@@ -111,7 +111,9 @@ namespace InventoryManagementSystem
 
         private void btnback_Click(object sender, EventArgs e)
         {
-
+            Main mainForm = (Main)ParentForm;
+            ProductManagementForm productManagementForm = new ProductManagementForm();
+            mainForm.LoadUserControl(productManagementForm);
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Xml.Linq;
 
 namespace InventoryManagementSystem
 {
-    public partial class ProductAdd : Form
+    public partial class ProductAdd : UserControl
     {
         public ProductAdd()
         {
@@ -67,7 +67,9 @@ namespace InventoryManagementSystem
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            Main mainForm = (Main)ParentForm;
+            ProductManagementForm productManagementForm = new ProductManagementForm();
+            mainForm.LoadUserControl(productManagementForm);
         }
     }
 }

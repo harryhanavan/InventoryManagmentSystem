@@ -1,4 +1,4 @@
-SupplierID,Name,EmailAddress,PhoneNumber,Category,Address
+SupplierID,Name,EmailAddress,PhoneNumber,Category,Address,City
 1,HP Suppliers,hp@example.com,123-456-7890,Computers and Accessories,1 Tech St, Sydney
 2,Apple Inc.,apple@example.com,234-567-8901,Smartphones and Wearables,2 Infinite Loop, Melbourne
 3,Samsung,samsung@example.com,345-678-9012,Electronics,3 Galaxy Rd, Brisbane

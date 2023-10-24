@@ -1,6 +1,6 @@
-namespace InventoryManagementSystem
+﻿namespace InventoryManagementSystem
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : UserControl
     {
         // Assuming users list is available for authentication
         private List<User> users = new List<User>();
@@ -41,11 +41,13 @@ namespace InventoryManagementSystem
                 MessageBox.Show("Incorrect username or password.");
                 return;
             }
-            User.CurrentUser.Add(user);
-            // Login successful, proceed to the dashboard or appropriate form
+
+            User.CurrentUser = user;
+            Main mainForm = (Main)this.ParentForm; // Getting reference to Main form
+            // Assuming user is a valid User object that you want to pass to the Dashboard
             Dashboard dashboard = new Dashboard(user);
-            dashboard.Show();
-            this.Hide();
+
+            mainForm.LoadUserControl(dashboard);
         }
 
         private void LoginCancelButton_Click(object sender, EventArgs e)
