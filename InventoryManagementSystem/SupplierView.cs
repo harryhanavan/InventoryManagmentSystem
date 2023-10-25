@@ -56,8 +56,8 @@ namespace InventoryManagementSystem
                     suppliers = suppliers
                         .Where(s => s.Name.ToLower().Contains(searchTerm) ||
                                     s.EmailAddress.ToLower().Contains(searchTerm) ||
-                                    s.PhoneNumber.ToLower().Contains(searchTerm) ||
-                                    s.Category.ToLower().Contains(searchTerm) ||
+                                    s.PhoneNumber.ToString().Contains(searchTerm) ||
+                                    s.Category.ToString().Contains(searchTerm) ||
                                     s.Address.ToLower().Contains(searchTerm) ||
                                     s.City.ToLower().Contains(searchTerm))
                         .ToList();
