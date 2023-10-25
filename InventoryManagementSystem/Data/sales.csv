@@ -1,0 +1,11 @@
+SaleID,Date,Customer Details,TotalAmount
+1,2023-09-25,"Edward, Los Angeles",7199.910000000001
+2,2023-10-24,"Charlie, Phoenix",199.89999999999998
+3,2023-10-03,"Charlie, Los Angeles",6539.900000000001
+4,2023-10-09,"Bob, New York",9379.859999999999
+5,2023-10-18,"Alice, Phoenix",159.92
+6,2023-10-10,"Edward, Phoenix",7199.94
+7,2023-10-18,"Alice, Chicago",779.89
+8,2023-09-27,"Bob, Chicago",799.98
+9,2023-10-18,"Alice, Los Angeles",6539.92
+10,2023-09-29,"Diana, New York",4799.9400000000005

@@ -45,7 +45,7 @@ namespace InventoryManagementSystem
             {
                 suppliers.Add(supplier);
                 List<string[]> data = suppliers.Select(s => s.ToCSV()).ToList();
-                FileManager.WriteData(suppliersFilePath, data);
+                FileManager.WriteDataSupplier(suppliersFilePath, data);
                 return true;
             }
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace InventoryManagementSystem
                     supplier.City = newCity;
 
                     List<string[]> data = suppliers.Select(s => s.ToCSV()).ToList();
-                    FileManager.WriteData(suppliersFilePath, data); // Save changes to CSV
+                    FileManager.WriteDataSupplier(suppliersFilePath, data); // Save changes to CSV
                     return true;
                 }
                 return false;
@@ -92,7 +92,7 @@ namespace InventoryManagementSystem
                 {
                     suppliers.Remove(supplier);
                     List<string[]> data = suppliers.Select(s => s.ToCSV()).ToList();
-                    FileManager.WriteData(suppliersFilePath, data); // Save changes to CSV
+                    FileManager.WriteDataSupplier(suppliersFilePath, data); // Save changes to CSV
                     return true;
                 }
                 return false;

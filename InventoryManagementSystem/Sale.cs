@@ -9,27 +9,54 @@ namespace InventoryManagementSystem
     internal class Sale
     {
         public int SaleID { get; private set; }
-        public int OrderID { get; set; }
-        public int ProductID { get; set; }
-        public int QuantitySold { get; set; }
         public DateTime Date { get; set; }
-        public decimal TotalAmount { get; set; }
-
-        public Sale(int saleId, int orderId,int productId, int quantitySold, DateTime date, decimal totalAmount)
+        public List<SaleItem> SaleItems { get; set; }
+        public string CustomerDetails { get; set; }
+        public decimal TotalAmount
         {
-            SaleID = saleId;
-            OrderID = orderId;
-            ProductID = productId;
-            QuantitySold = quantitySold;
-            Date = date;
-            TotalAmount = totalAmount;
+            get
+            {
+                decimal total = 0;
+                foreach (var item in SaleItems)
+                {
+                    total += item.TotalPrice;
+                }
+                return total;
+            }
         }
-
+        private static string dataDirectory = "../../../Data/";
+        private static string salesFilePath = Path.Combine(dataDirectory, "sales.csv");
+        private static string saleItemsFilePath = Path.Combine(dataDirectory, "saleItems.csv");
+        public Sale(string customerDetails)
+        {
+            SaleID = GenerateNewSaleID();
+            Date = DateTime.Now;
+            SaleItems = new List<SaleItem>();
+            CustomerDetails = customerDetails;
+        }
+        public void AddSaleItem(SaleItem item)
+        {
+            SaleItems.Add(item);
+        }
         public static bool RecordSale(Sale sale, List<Sale> sales)
         {
             try
             {
-                sales.Add(sale);
+                FileManager.WriteDataSale(salesFilePath, sales);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while recording the sale: {ex.Message}");
+                return false;
+            }
+        }
+        public static bool RecordSaleItem(SaleItem saleItem, List<SaleItem> saleItems)
+        {
+            try
+            {
+                Product.UpdateQuantity(saleItem.ProductID, saleItem.Quantity);
+                FileManager.WriteDataSaleItem(saleItemsFilePath, saleItems);
                 return true;
             }
             catch (Exception ex)
@@ -44,5 +71,52 @@ namespace InventoryManagementSystem
             // This method could be enhanced to filter sales based on dates, products, etc.
             return sales;
         }
+
+        public Sale CreateSale(string customerDetails)
+        {
+            Sale sale = new Sale(customerDetails);
+            return sale;
+        }
+        private int GenerateNewSaleID()
+        {
+            int highestSaleID = 0;
+            try
+            {
+                // Read the sales data from the CSV file
+                List<Sale> sales = LoadSales();
+                // Identify the highest SaleID
+                foreach (var sale in sales)
+                {
+                    if (sale.SaleID > highestSaleID)
+                    {
+                        highestSaleID = sale.SaleID;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while generating a new SaleID: {ex.Message}");
+            }
+            // Return one more than the highest SaleID found, or 1 if no sales are found
+            return highestSaleID + 1;
+        }
+        public static List<Sale> LoadSales()
+        {
+            List<Sale> sales = new List<Sale>();
+            List<string[]> data = FileManager.ReadData(salesFilePath);
+
+            foreach (var record in data.Skip(1)) // Skipping the header
+            {
+                sales.Add(new Sale(
+                    saleId: int.Parse(record[0]),
+                    date: record[1],
+                    customerDetails: record[2],
+                    totalAmount: decimal.Parse(record[4])
+                ));
+            }
+
+            return sales;
+        }
+
     }
 }
