@@ -8,26 +8,27 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\hhanavan\\.nuget\\packages\\": {}
+    "C:\\Users\\Dylan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hhanavan\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
       "projectName": "InventoryManagementSystem",
-      "projectPath": "C:\\Users\\hhanavan\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\hhanavan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hhanavan\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\obj\\",
+      "projectPath": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "packagesPath": "C:\\Users\\Dylan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hhanavan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -63,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
