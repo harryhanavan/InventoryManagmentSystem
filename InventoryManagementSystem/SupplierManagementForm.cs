@@ -48,5 +48,37 @@ namespace InventoryManagementSystem
                 mainForm.LoadUserControl(supplierView);
             }
         }
+
+        private void btnEditSuppliers_Click(object sender, EventArgs e)
+        {
+            // Find the Main form
+            Control parentControl = this.Parent;
+            while (!(parentControl is Main) && parentControl != null)
+            {
+                parentControl = parentControl.Parent;
+            }
+
+            if (parentControl is Main mainForm)
+            {
+                SupplierEdit supplierEdit = new SupplierEdit();
+                mainForm.LoadUserControl(supplierEdit);
+            }
+        }
+
+        private void btnAddSuppliers_Click(object sender, EventArgs e)
+        {
+            // Find the Main form
+            Control parentControl = this.Parent;
+            while (!(parentControl is Main) && parentControl != null)
+            {
+                parentControl = parentControl.Parent;
+            }
+
+            if (parentControl is Main mainForm)
+            {
+                SupplierAdd supplierAdd = new SupplierAdd();
+                mainForm.LoadUserControl(supplierAdd);
+            }
+        }
     }
 }

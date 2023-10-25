@@ -30,7 +30,6 @@ namespace InventoryManagementSystem
             Password = password;
             Role = role;
         }
-
         public static User CurrentUser { get; set; }
         
         public static bool Login(string username, string password, List<User> users)

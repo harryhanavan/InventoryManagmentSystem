@@ -21,6 +21,12 @@ namespace InventoryManagementSystem
         }
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            int productId = int.Parse(txtProductID.Text);
+            if (Product.Exists(productId)) // Assuming you have an Exists method in your Product class
+            {
+                MessageBox.Show("A product with this ID already exists. Please enter a unique Product ID.");
+                return;
+            }
             // Load the current list of products
             List<Product> products = Product.LoadProducts();
 
@@ -41,7 +47,7 @@ namespace InventoryManagementSystem
             }
 
             // 2. Validate Numerical Values
-            if (!int.TryParse(txtProductID.Text, out int productId) ||
+            if (!int.TryParse(txtProductID.Text, out productId) ||
                 !int.TryParse(txtProductQuantity.Text, out int quantity) ||
                 !decimal.TryParse(txtProductPrice.Text, out decimal price) ||
                 !int.TryParse(txtSupplierId.Text, out int supplierId))
@@ -71,5 +77,7 @@ namespace InventoryManagementSystem
             ProductManagementForm productManagementForm = new ProductManagementForm();
             mainForm.LoadUserControl(productManagementForm);
         }
+
+
     }
 }

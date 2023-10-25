@@ -183,7 +183,6 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(lblProductSupID);
             Controls.Add(txtSupplierId);
             Controls.Add(btnCancel);
@@ -201,7 +200,7 @@
             Controls.Add(txtProductName);
             Controls.Add(lblProductID);
             Name = "ProductAdd";
-            Text = "ProductAdd";
+            Size = new Size(800, 450);
             ResumeLayout(false);
             PerformLayout();
         }

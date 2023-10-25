@@ -133,6 +133,11 @@ namespace InventoryManagementSystem
         {
             return $"{ProductID} - {Name}";
         }
+        public static bool Exists(int id)
+        {
+            List<Product> products = LoadProducts();
+            return products.Any(p => p.ProductID == id);
+        }
         public string[] ToCSV()
         {
             return new string[]

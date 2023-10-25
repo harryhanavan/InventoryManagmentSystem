@@ -6,18 +6,29 @@ using System.Threading.Tasks;
 
 namespace InventoryManagementSystem
 {
+    public enum SupplierCategory
+    {
+        Computers,
+        Smartphones,
+        Electronics,
+        Accessories,
+        Audio,
+        Wearables
+
+        // Add more categories as needed
+    }
     internal class Supplier
     {
         public int SupplierID { get; private set; }
         public string Name { get; set; }
         public string EmailAddress { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Category { get; set; } // Updated to Category
+        public long PhoneNumber { get; set; }
+        public SupplierCategory Category { get; set; } // Updated to Category
         public string Address { get; set; } // Street Number, Name
         public string City { get; set; }
         private static string dataDirectory = "../../../Data/";
         private static string suppliersFilePath = Path.Combine(dataDirectory, "suppliers.csv");
-        public Supplier(int supplierId, string name, string emailAddress, string phoneNumber, string category, string address, string city)
+        public Supplier(int supplierId, string name, string emailAddress, long phoneNumber, SupplierCategory category, string address, string city)
         {
             SupplierID = supplierId;
             Name = name;
@@ -44,7 +55,7 @@ namespace InventoryManagementSystem
             }
         }
         public static bool EditSupplier(int supplierId, string newName, string newEmailAddress,
-            string newPhoneNumber, string newCategory, string newAddress, string newCity, List<Supplier> suppliers)
+            long newPhoneNumber, SupplierCategory newCategory, string newAddress, string newCity, List<Supplier> suppliers)
         {
             try
             {
@@ -103,8 +114,8 @@ namespace InventoryManagementSystem
                     supplierId: int.Parse(record[0]),
                     name: record[1],
                     emailAddress: record[2],
-                    phoneNumber: record[3],
-                    category: record[4],
+                    phoneNumber: long.Parse(record[3]),
+                    category: (SupplierCategory)Enum.Parse(typeof(SupplierCategory) ,record[4]),
                     address: record[5],
                     city: record[6]
                 ));
@@ -112,7 +123,11 @@ namespace InventoryManagementSystem
 
             return suppliers;
         }
-
+        public static bool Exists(int id)
+        {
+            List<Supplier> suppliers = LoadSuppliers();
+            return suppliers.Any(p => p.SupplierID == id);
+        }
         public string[] ToCSV()
         {
             return new string[]
@@ -120,8 +135,8 @@ namespace InventoryManagementSystem
             SupplierID.ToString(),
             Name,
             EmailAddress,
-            PhoneNumber,
-            Category,
+            PhoneNumber.ToString(),
+            Category.ToString(),
             Address,
             City
             };

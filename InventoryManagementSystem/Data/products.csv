@@ -9,4 +9,3 @@ ProductID,Name,Description,Category,Price,Quantity,SupplierID
 1008,Anker USB-C Charger,30W USB-C Charger,Accessories,19.99,30,4
 1009,JBL Flip 5,Bluetooth Speaker,Audio,119.99,10,5
 1010,Fitbit Charge 5s,Fitness Tracker,Wearables,179.99,16,7
-1011,TestAddProductv2,Testing Adding a Product,Accessories,14.59,11,3

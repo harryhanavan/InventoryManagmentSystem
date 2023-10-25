@@ -30,11 +30,13 @@
         {
             btnBack = new Button();
             btnViewSuppliers = new Button();
+            btnAddSuppliers = new Button();
+            btnEditSuppliers = new Button();
             SuspendLayout();
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(360, 251);
+            btnBack.Location = new Point(359, 235);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(75, 23);
             btnBack.TabIndex = 1;
@@ -44,7 +46,7 @@
             // 
             // btnViewSuppliers
             // 
-            btnViewSuppliers.Location = new Point(324, 203);
+            btnViewSuppliers.Location = new Point(183, 206);
             btnViewSuppliers.Name = "btnViewSuppliers";
             btnViewSuppliers.Size = new Size(138, 23);
             btnViewSuppliers.TabIndex = 2;
@@ -52,15 +54,36 @@
             btnViewSuppliers.UseVisualStyleBackColor = true;
             btnViewSuppliers.Click += btnViewSuppliers_Click;
             // 
+            // btnAddSuppliers
+            // 
+            btnAddSuppliers.Location = new Point(327, 206);
+            btnAddSuppliers.Name = "btnAddSuppliers";
+            btnAddSuppliers.Size = new Size(138, 23);
+            btnAddSuppliers.TabIndex = 3;
+            btnAddSuppliers.Text = "Add Suppliers";
+            btnAddSuppliers.UseVisualStyleBackColor = true;
+            btnAddSuppliers.Click += btnAddSuppliers_Click;
+            // 
+            // btnEditSuppliers
+            // 
+            btnEditSuppliers.Location = new Point(471, 206);
+            btnEditSuppliers.Name = "btnEditSuppliers";
+            btnEditSuppliers.Size = new Size(138, 23);
+            btnEditSuppliers.TabIndex = 4;
+            btnEditSuppliers.Text = "Edit Suppliers";
+            btnEditSuppliers.UseVisualStyleBackColor = true;
+            btnEditSuppliers.Click += btnEditSuppliers_Click;
+            // 
             // SupplierManagementForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            Controls.Add(btnEditSuppliers);
+            Controls.Add(btnAddSuppliers);
             Controls.Add(btnViewSuppliers);
             Controls.Add(btnBack);
             Name = "SupplierManagementForm";
-            Text = "SupplierManagementForm";
+            Size = new Size(800, 450);
             ResumeLayout(false);
         }
 
@@ -68,5 +91,7 @@
 
         private Button btnBack;
         private Button btnViewSuppliers;
+        private Button btnAddSuppliers;
+        private Button btnEditSuppliers;
     }
 }
