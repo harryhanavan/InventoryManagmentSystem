@@ -118,3 +118,4 @@ C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\
 C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.pdb
 C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.genruntimeconfig.cache
 C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\ref\InventoryManagementSystem.dll
+C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SalesAdd.resources

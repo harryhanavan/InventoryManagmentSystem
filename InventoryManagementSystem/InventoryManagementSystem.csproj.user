@@ -22,6 +22,9 @@
     <Compile Update="ProductView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="SalesAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="SalesManagementForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
