@@ -34,6 +34,14 @@ namespace InventoryManagementSystem
             SaleItems = new List<SaleItem>();
             CustomerDetails = customerDetails;
         }
+        public Sale(int saleID, DateTime date, List<SaleItem> saleItems, string customerDetails)
+        {
+            SaleID = saleID;
+            Date = date;
+            SaleItems = saleItems;
+            CustomerDetails = customerDetails;
+        }
+
         public void AddSaleItem(SaleItem item)
         {
             SaleItems.Add(item);
@@ -111,7 +119,8 @@ namespace InventoryManagementSystem
                     saleId: int.Parse(record[0]),
                     date: record[1],
                     customerDetails: record[2],
-                    totalAmount: decimal.Parse(record[4])
+                    totalAmount: decimal.Parse(record[4]),
+                    SaleItems = SaleItem.LoadSaleItems()
                 ));
             }
 

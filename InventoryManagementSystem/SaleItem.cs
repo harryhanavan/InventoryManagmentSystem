@@ -13,7 +13,8 @@ namespace InventoryManagementSystem
         public int ProductID { get; set; }
         public int Quantity { get; set; }
         public decimal PricePerUnit { get; set; }
-
+        private static string dataDirectory = "../../../Data/";
+        private static string saleItemsFilePath = Path.Combine(dataDirectory, "saleItems.csv");
         public decimal TotalPrice
         {
             get
@@ -21,20 +22,55 @@ namespace InventoryManagementSystem
                 return Quantity * PricePerUnit;
             }
         }
-
-        public SaleItem(Product product, int quantity)
+        public SaleItem(int saleID, int saleItemID, int productID, int quantity, decimal pricePerUnit)
         {
-            ProductID = product.ProductID;
+            SaleID = saleID;
+            SaleItemID = saleItemID;
+            ProductID = productID;
             Quantity = quantity;
-            PricePerUnit = product.Price;
+            PricePerUnit = pricePerUnit;
         }
-        public void AddProductToSale(Product product, int quantity)
-        {
-            SaleItemID = // generate a new sale item ID
-            SaleID = // the ID of the current sale
+        public void AddProductToSale(Sale sale, Product product, int quantity)
+        {            
+            SaleItemID = SaleItem.GenerateNewSaleItemID();
+            SaleID = sale.SaleID;
             ProductID = product.ProductID;
             Quantity = quantity;
             PricePerUnit = product.Price;
+            SaleItem saleItem = new SaleItem(SaleID, SaleItemID, ProductID, Quantity, PricePerUnit);
+            sale.AddSaleItem(saleItem); // Add the sale item to the sale
+            Product.UpdateQuantity(quantity, product.ProductID); // Update the product quantity
+        }
+        private static int GenerateNewSaleItemID()
+        {
+            List<SaleItem> saleItems = LoadSaleItems();
+            int highestSaleItemID = 0;
+
+            foreach (var saleItem in saleItems)
+            {
+                if (saleItem.SaleItemID > highestSaleItemID)
+                {
+                    highestSaleItemID = saleItem.SaleItemID;
+                }
+            }
+
+            return highestSaleItemID + 1;
+        }
+        public static List<SaleItem> LoadSaleItems() {
+            List<SaleItem> saleItems = new List<SaleItem>();
+            List<string[]> data = FileManager.ReadData(saleItemsFilePath);
+            foreach (var record in data)
+            {
+                int saleID = int.Parse(record[0]);
+                int saleItemID = int.Parse(record[1]);
+                int productID = int.Parse(record[2]);
+                int quantity = int.Parse(record[3]);
+                decimal pricePerUnit = decimal.Parse(record[4]);
+                SaleItem saleItem = new SaleItem(saleID, saleItemID, productID, quantity, pricePerUnit);
+                saleItems.Add(saleItem);
+            }
+            return saleItems;
+            
         }
     }
 }
