@@ -12,18 +12,8 @@ namespace InventoryManagementSystem
         public DateTime Date { get; set; }
         public List<SaleItem> SaleItems { get; set; }
         public string CustomerDetails { get; set; }
-        public decimal TotalAmount
-        {
-            get
-            {
-                decimal total = 0;
-                foreach (var item in SaleItems)
-                {
-                    total += item.TotalPrice;
-                }
-                return total;
-            }
-        }
+        public decimal TotalAmount { get; set; }
+
         private static string dataDirectory = "../../../Data/";
         private static string salesFilePath = Path.Combine(dataDirectory, "sales.csv");
         private static string saleItemsFilePath = Path.Combine(dataDirectory, "saleItems.csv");
@@ -33,13 +23,15 @@ namespace InventoryManagementSystem
             Date = DateTime.Now;
             SaleItems = new List<SaleItem>();
             CustomerDetails = customerDetails;
+            TotalAmount = 0;
         }
-        public Sale(int saleID, DateTime date, List<SaleItem> saleItems, string customerDetails)
+        public Sale(int saleID, DateTime date, string customerDetails, List<SaleItem> saleItems, decimal totalAmount)
         {
             SaleID = saleID;
             Date = date;
             SaleItems = saleItems;
             CustomerDetails = customerDetails;
+            TotalAmount = totalAmount;
         }
 
         public void AddSaleItem(SaleItem item)
@@ -50,6 +42,7 @@ namespace InventoryManagementSystem
         {
             try
             {
+                sales.Add(sale);
                 FileManager.WriteDataSale(salesFilePath, sales);
                 return true;
             }
@@ -74,18 +67,13 @@ namespace InventoryManagementSystem
             }
         }
 
-        public static List<Sale> ViewSales(List<Sale> sales)
-        {
-            // This method could be enhanced to filter sales based on dates, products, etc.
-            return sales;
-        }
 
         public Sale CreateSale(string customerDetails)
         {
             Sale sale = new Sale(customerDetails);
             return sale;
         }
-        private int GenerateNewSaleID()
+        public static int GenerateNewSaleID()
         {
             int highestSaleID = 0;
             try
@@ -110,22 +98,45 @@ namespace InventoryManagementSystem
         }
         public static List<Sale> LoadSales()
         {
+
             List<Sale> sales = new List<Sale>();
             List<string[]> data = FileManager.ReadData(salesFilePath);
 
             foreach (var record in data.Skip(1)) // Skipping the header
             {
+                int saleID = int.Parse(record[0]);
+                DateTime saleDate = DateTime.Parse(record[1]);
+                List<SaleItem> saleItems = SaleItem.LoadSaleItems(saleID);
                 sales.Add(new Sale(
-                    saleId: int.Parse(record[0]),
-                    date: record[1],
-                    customerDetails: record[2],
-                    totalAmount: decimal.Parse(record[4]),
-                    SaleItems = SaleItem.LoadSaleItems()
-                ));
+                    saleID: saleID,
+                    date: saleDate,
+                    customerDetails: record[2],                   
+                    saleItems: saleItems,
+                    totalAmount: decimal.Parse(record[3])
+                ));;
             }
 
             return sales;
         }
+        public override string ToString()
+        {
+            return $"{SaleID},{Date},{CustomerDetails},{TotalAmount}";
+        }
+        public static Sale GetSaleById(int saleId)
+        {
+            try
+            {
+                // Load all sales
+                List<Sale> sales = LoadSales();
 
+                // Find and return the sale that matches the provided SaleID
+                return sales.FirstOrDefault(sale => sale.SaleID == saleId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while fetching the sale by ID: {ex.Message}");
+                return null; // Returning null if an exception occurred
+            }
+        }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             btnBack = new Button();
+            btnNewSale = new Button();
+            btnViewSales = new Button();
             SuspendLayout();
             // 
             // btnBack
@@ -41,19 +43,42 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // btnNewSale
+            // 
+            btnNewSale.Location = new Point(249, 141);
+            btnNewSale.Name = "btnNewSale";
+            btnNewSale.Size = new Size(75, 23);
+            btnNewSale.TabIndex = 1;
+            btnNewSale.Text = "New Sale";
+            btnNewSale.UseVisualStyleBackColor = true;
+            btnNewSale.Click += btnNewSale_Click;
+            // 
+            // btnViewSales
+            // 
+            btnViewSales.Location = new Point(526, 148);
+            btnViewSales.Name = "btnViewSales";
+            btnViewSales.Size = new Size(75, 23);
+            btnViewSales.TabIndex = 2;
+            btnViewSales.Text = "View Sales";
+            btnViewSales.UseVisualStyleBackColor = true;
+            btnViewSales.Click += btnViewSales_Click;
+            // 
             // SalesManagementForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            Controls.Add(btnViewSales);
+            Controls.Add(btnNewSale);
             Controls.Add(btnBack);
             Name = "SalesManagementForm";
-            Text = "SalesManagementForm";
+            Size = new Size(800, 450);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnBack;
+        private Button btnNewSale;
+        private Button btnViewSales;
     }
 }

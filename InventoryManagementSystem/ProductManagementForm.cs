@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+
 
 namespace InventoryManagementSystem
 {
@@ -55,5 +57,6 @@ namespace InventoryManagementSystem
                 mainForm.LoadUserControl(loginForm);
             }
         }
+
     }
 }

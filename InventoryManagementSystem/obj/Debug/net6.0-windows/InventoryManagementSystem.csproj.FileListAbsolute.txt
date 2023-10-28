@@ -90,3 +90,7 @@ C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSyst
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierView.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierAdd.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierEdit.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.NewSale.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierAdd.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierEdit.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SaleView.resources

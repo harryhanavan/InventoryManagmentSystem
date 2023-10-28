@@ -28,6 +28,9 @@
     <Compile Update="SalesManagementForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="SaleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="SupplierAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>

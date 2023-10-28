@@ -93,13 +93,14 @@ namespace InventoryManagementSystem
                 return false;
             }
         }
+        /*
         public static bool WriteDataSaleItem(string filePath, List<SaleItem> data)
         {
             try
             {
                 using (StreamWriter writer = new StreamWriter(filePath, false))
                 {
-                    writer.WriteLine("SaleID,Date,Customer Details,Total Amount");
+                    writer.WriteLine("SaleItemID,SaleID,Customer Details,PricePerUnit");
                     foreach (var record in data)
                     {
                         writer.WriteLine(string.Join(",", record));
@@ -112,6 +113,30 @@ namespace InventoryManagementSystem
                 Console.WriteLine($"An error occurred while writing to the Sale files: {ex.Message}");
                 return false;
             }
+        }*/
+        public static bool WriteDataSaleItem(string filePath, List<SaleItem> data)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath, false))
+                {
+                    // Correct the headers
+                    writer.WriteLine("SaleItemID,SaleID,ProductID,Quantity,PricePerUnit");
+
+                    foreach (var record in data)
+                    {
+                        // Use the ToString method of the SaleItem class
+                        writer.WriteLine(record.ToString());
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while writing to the Sale files: {ex.Message}");
+                return false;
+            }
         }
+
     }
 }

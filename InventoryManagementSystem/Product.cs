@@ -16,7 +16,7 @@ namespace InventoryManagementSystem
         Wearables
         // Add more categories as needed
     }
-    internal class Product
+    public class Product
     {
         public int ProductID { get; private set; }
         public string Name { get; set; }

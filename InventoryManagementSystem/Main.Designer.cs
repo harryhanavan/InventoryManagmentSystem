@@ -35,7 +35,7 @@
             // 
             panelContainer.Location = new Point(12, 12);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(832, 426);
+            panelContainer.Size = new Size(1013, 543);
             panelContainer.TabIndex = 0;
             panelContainer.Paint += panelContainer_Paint;
             // 
@@ -43,7 +43,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(856, 454);
+            ClientSize = new Size(1037, 567);
             Controls.Add(panelContainer);
             Name = "Main";
             Text = "Main";
