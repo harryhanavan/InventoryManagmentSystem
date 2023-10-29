@@ -16,12 +16,15 @@ namespace InventoryManagementSystem
         {
             InitializeComponent();
             LoadSalesIntoDataGridView();
+            LoadItemSalesIntoDataGridView();
         }
 
         private void SalesViewForm_Load(object sender, EventArgs e)
         {
             LoadSalesIntoDataGridView();
+            LoadItemSalesIntoDataGridView();
         }
+
 
         private void LoadSalesIntoDataGridView()
         {
@@ -39,6 +42,22 @@ namespace InventoryManagementSystem
             }
         }
 
+        private void LoadItemSalesIntoDataGridView()
+        {
+            try
+            {
+                dataGridViewItemSales.Rows.Clear();
+
+                List<SaleItem> itemSales = SaleItem.LoadSaleItems();
+                dataGridViewItemSales.DataSource = itemSales;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("an error occured while loading item sales: " + ex.Message + "\n" + ex.StackTrace);
+
+            }
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             Main mainForm = (Main)ParentForm;
@@ -47,6 +66,21 @@ namespace InventoryManagementSystem
         }
 
         private void dataGridViewSales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void SalesViewForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSupplierCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

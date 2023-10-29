@@ -108,7 +108,6 @@ namespace InventoryManagementSystem
             foreach (var record in data.Skip(1)) // Skipping the header
             {
                
-
                 sales.Add(new Sale(
                     saleID: int.Parse(record[0]),
                     date: DateTime.Parse(record[1]),
