@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\harry\\.nuget\\packages\\": {}
+    "C:\\Users\\Dylan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
       "projectName": "InventoryManagementSystem",
-      "projectPath": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\harry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\obj\\",
+      "projectPath": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "packagesPath": "C:\\Users\\Dylan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\harry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

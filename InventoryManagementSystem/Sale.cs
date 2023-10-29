@@ -23,6 +23,10 @@ namespace InventoryManagementSystem
                 }
                 return total;
             }
+            set
+            {
+                ;
+            }
         }
         private static string dataDirectory = "../../../Data/";
         private static string salesFilePath = Path.Combine(dataDirectory, "sales.csv");
@@ -34,12 +38,13 @@ namespace InventoryManagementSystem
             SaleItems = new List<SaleItem>();
             CustomerDetails = customerDetails;
         }
-        public Sale(int saleID, DateTime date, List<SaleItem> saleItems, string customerDetails)
+        public Sale(int saleID, DateTime date, List<SaleItem> saleItems, string customerDetails, decimal totalAmount)
         {
             SaleID = saleID;
             Date = date;
             SaleItems = saleItems;
             CustomerDetails = customerDetails;
+            TotalAmount = totalAmount;
         }
 
         public void AddSaleItem(SaleItem item)
@@ -115,12 +120,15 @@ namespace InventoryManagementSystem
 
             foreach (var record in data.Skip(1)) // Skipping the header
             {
+
+
                 sales.Add(new Sale(
-                    saleId: int.Parse(record[0]),
-                    date: record[1],
+                    saleID: int.Parse(record[0]),
+                    date: DateTime.Parse(record[1]),
+                    saleItems: SaleItem.LoadSaleItems(),
                     customerDetails: record[2],
-                    totalAmount: decimal.Parse(record[4]),
-                    SaleItems = SaleItem.LoadSaleItems()
+                    totalAmount: decimal.Parse(record[4])
+                    
                 ));
             }
 

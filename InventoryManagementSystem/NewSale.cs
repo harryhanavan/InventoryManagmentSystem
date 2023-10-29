@@ -16,7 +16,7 @@ namespace InventoryManagementSystem
         {
             InitializeComponent();
         }
-        public void ExecuteSale(string customerDetails, List<Product> products, List<int> quantities)
+        /*public void ExecuteSale(string customerDetails, List<Product> products, List<int> quantities)
         {
             Sale sale = new Sale(customerDetails); // Create a new sale
 
@@ -28,6 +28,6 @@ namespace InventoryManagementSystem
                 SaleItem.AddProductToSale(sale, product, quantity); // Add the product to the sale
 
             }
-        }
+        }*/
     }
 }
