@@ -1,26 +1,86 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net6.0-windows7.0": {
+      "WinForms.DataVisualization/1.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WinForms.DataVisualization/1.9.0": {
+      "sha512": "lRhRPS40V3o5dY38NwaIZyOPrD+bbFq+UjNCa/eAucMICrSFVUE9rO6H2G73xx65mZ94Q7lYw4BSaZRPlcxhxQ==",
+      "type": "package",
+      "path": "winforms.datavisualization/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "NuGetReadme.md",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.xml",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.xml",
+        "winforms.datavisualization.1.9.0.nupkg.sha512",
+        "winforms.datavisualization.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net6.0-windows7.0": [
+      "WinForms.DataVisualization >= 1.9.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Dylan\\.nuget\\packages\\": {}
+    "C:\\Users\\harry\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
       "projectName": "InventoryManagementSystem",
-      "projectPath": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\Dylan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\obj\\",
+      "projectPath": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "packagesPath": "C:\\Users\\harry\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\harry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -45,6 +105,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "WinForms.DataVisualization": {
+            "target": "Package",
+            "version": "[1.9.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -64,7 +130,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

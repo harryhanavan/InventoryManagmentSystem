@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AbAONftT7xwCHhfBWEEC8DOw5G2tvkDcSiJC0qmcwc+0q4sQh5NtToz2cUcLP8MHSNWrF/8cnbo8wntc11+ZCA==",
+  "dgSpecHash": "R3KZHYwuInDgxFDc7DWacNbj+CSrLNgag5GjPd7nInUmHifmFZkOM9PBEocMz6dYgqrjMF0u3XX11r/cdzOCtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dylan\\Documents\\Visual Studio 2015\\Projects\\Hospital Management System\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\harry\\.nuget\\packages\\winforms.datavisualization\\1.9.0\\winforms.datavisualization.1.9.0.nupkg.sha512"
+  ],
   "logs": []
 }

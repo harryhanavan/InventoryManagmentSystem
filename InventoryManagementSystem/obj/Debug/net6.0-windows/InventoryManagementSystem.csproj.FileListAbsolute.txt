@@ -90,32 +90,11 @@ C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSyst
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierView.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierAdd.resources
 C:\Users\hhanavan\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierEdit.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\InventoryManagementSystem.exe
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\InventoryManagementSystem.deps.json
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\InventoryManagementSystem.runtimeconfig.json
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\InventoryManagementSystem.dll
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\InventoryManagementSystem.pdb
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.csproj.AssemblyReference.cache
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.Dashboard.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.LoginForm.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.Main.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductAdd.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductEdit.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductManagementForm.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.ProductView.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SalesManagementForm.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierAdd.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierEdit.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierManagementForm.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierView.resources
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.csproj.GenerateResource.cache
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.AssemblyInfoInputs.cache
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.AssemblyInfo.cs
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.csproj.CoreCompileInputs.cache
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.dll
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\refint\InventoryManagementSystem.dll
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.pdb
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.genruntimeconfig.cache
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\ref\InventoryManagementSystem.dll
-C:\Users\Dylan\Documents\Visual Studio 2015\Projects\Hospital Management System\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SalesAdd.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.NewSale.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierAdd.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SupplierEdit.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.SaleView.resources
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.csproj.AssemblyReference.cache
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.csproj.CopyComplete

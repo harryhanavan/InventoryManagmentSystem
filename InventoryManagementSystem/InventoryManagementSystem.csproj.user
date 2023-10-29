@@ -10,6 +10,9 @@
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="NewSale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ProductAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="SalesManagementForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SaleView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="SupplierAdd.cs">

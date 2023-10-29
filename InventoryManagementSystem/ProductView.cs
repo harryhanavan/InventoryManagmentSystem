@@ -16,6 +16,8 @@ namespace InventoryManagementSystem
         {
             InitializeComponent();
             LoadProductsIntoDataGridView();
+            cmbCategory.DataSource = Enum.GetValues(typeof(ProductCategory));
+
         }
         private void ProductView_Load(object sender, EventArgs e)
         {
@@ -60,7 +62,7 @@ namespace InventoryManagementSystem
 
             string searchTerm = string.IsNullOrWhiteSpace(txtSearch.Text) ? null : txtSearch.Text.ToLower();
             string selectedCategory = cmbCategory.SelectedItem as string;
-            string selectedPriceRange = comboBox1.SelectedItem as string;
+            string selectedPriceRange = cmbPrice.SelectedItem as string;
             int selectedSupplierID = -1; // Default value
             if (cmbSupplier.SelectedItem != null && int.TryParse(cmbSupplier.SelectedItem.ToString(), out int parsedSupplierID))
             {
@@ -88,12 +90,12 @@ namespace InventoryManagementSystem
             dataGridViewProducts.Refresh();
 
         }
-
-        // You can create a method to handle the price range filtering
         private bool PriceInRange(decimal price, string selectedPriceRange)
         {
             switch (selectedPriceRange)
             {
+                case "All":
+                    return true; // No price filter
                 case "Below $50":
                     return price < 50;
                 case "$50 - $100":

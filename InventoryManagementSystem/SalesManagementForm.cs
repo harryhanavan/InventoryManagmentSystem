@@ -33,24 +33,36 @@ namespace InventoryManagementSystem
             }
         }
 
-        private void salesAdd_Click(object sender, EventArgs e)
+        private void btnNewSale_Click(object sender, EventArgs e)
         {
+            // Find the Main form
+            Control parentControl = this.Parent;
+            while (!(parentControl is Main) && parentControl != null)
+            {
+                parentControl = parentControl.Parent;
+            }
 
+            if (parentControl is Main mainForm)
+            {
+                NewSale newSale = new NewSale();
+                mainForm.LoadUserControl(newSale);
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnViewSales_Click(object sender, EventArgs e)
         {
+            // Find the Main form
+            Control parentControl = this.Parent;
+            while (!(parentControl is Main) && parentControl != null)
+            {
+                parentControl = parentControl.Parent;
+            }
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            if (parentControl is Main mainForm)
+            {
+                SaleView saleView = new SaleView();
+                mainForm.LoadUserControl(saleView);
+            }
         }
     }
 }

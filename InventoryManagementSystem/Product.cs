@@ -8,15 +8,15 @@ namespace InventoryManagementSystem
 {
     public enum ProductCategory
     {
+        All,
         Laptop,
         Smartphone,
         Tablet,
         Accessories,
         Audio,
         Wearables
-        // Add more categories as needed
     }
-    internal class Product
+    public class Product
     {
         public int ProductID { get; private set; }
         public string Name { get; set; }
@@ -137,6 +137,18 @@ namespace InventoryManagementSystem
         {
             List<Product> products = LoadProducts();
             return products.Any(p => p.ProductID == id);
+        }
+        public static Product GetProductByID(int id)
+        {
+            List<Product> products = LoadProducts();
+            return products.Find(p => p.ProductID == id);
+        }
+        public static void UpdateQuantity(int quantity, int ProductID)
+        {
+            Product product = Product.GetProductByID(ProductID);
+            product.Quantity -= quantity;
+            FileManager.WriteDataProduct(productsFilePath, LoadProducts());
+
         }
         public string[] ToCSV()
         {

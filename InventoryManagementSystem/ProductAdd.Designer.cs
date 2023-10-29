@@ -48,7 +48,7 @@
             // 
             // btnAddProduct
             // 
-            btnAddProduct.Location = new Point(470, 330);
+            btnAddProduct.Location = new Point(552, 342);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(95, 23);
             btnAddProduct.TabIndex = 25;
@@ -59,7 +59,7 @@
             // cmbCategory
             // 
             cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(406, 272);
+            cmbCategory.Location = new Point(488, 284);
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(121, 23);
             cmbCategory.TabIndex = 24;
@@ -67,7 +67,7 @@
             // lblProductCategory
             // 
             lblProductCategory.AutoSize = true;
-            lblProductCategory.Location = new Point(287, 280);
+            lblProductCategory.Location = new Point(369, 292);
             lblProductCategory.Name = "lblProductCategory";
             lblProductCategory.Size = new Size(100, 15);
             lblProductCategory.TabIndex = 23;
@@ -76,7 +76,7 @@
             // lblProductQuantity
             // 
             lblProductQuantity.AutoSize = true;
-            lblProductQuantity.Location = new Point(289, 251);
+            lblProductQuantity.Location = new Point(371, 263);
             lblProductQuantity.Name = "lblProductQuantity";
             lblProductQuantity.Size = new Size(98, 15);
             lblProductQuantity.TabIndex = 22;
@@ -85,7 +85,7 @@
             // lblProductPrice
             // 
             lblProductPrice.AutoSize = true;
-            lblProductPrice.Location = new Point(307, 222);
+            lblProductPrice.Location = new Point(389, 234);
             lblProductPrice.Name = "lblProductPrice";
             lblProductPrice.Size = new Size(78, 15);
             lblProductPrice.TabIndex = 21;
@@ -94,7 +94,7 @@
             // lblProductDescription
             // 
             lblProductDescription.AutoSize = true;
-            lblProductDescription.Location = new Point(273, 193);
+            lblProductDescription.Location = new Point(355, 205);
             lblProductDescription.Name = "lblProductDescription";
             lblProductDescription.Size = new Size(112, 15);
             lblProductDescription.TabIndex = 20;
@@ -103,7 +103,7 @@
             // lblProductName
             // 
             lblProductName.AutoSize = true;
-            lblProductName.Location = new Point(301, 164);
+            lblProductName.Location = new Point(383, 176);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new Size(84, 15);
             lblProductName.TabIndex = 19;
@@ -111,35 +111,35 @@
             // 
             // txtProductQuantity
             // 
-            txtProductQuantity.Location = new Point(406, 243);
+            txtProductQuantity.Location = new Point(488, 255);
             txtProductQuantity.Name = "txtProductQuantity";
             txtProductQuantity.Size = new Size(121, 23);
             txtProductQuantity.TabIndex = 18;
             // 
             // txtProductID
             // 
-            txtProductID.Location = new Point(406, 127);
+            txtProductID.Location = new Point(488, 139);
             txtProductID.Name = "txtProductID";
             txtProductID.Size = new Size(121, 23);
             txtProductID.TabIndex = 17;
             // 
             // txtProductDescription
             // 
-            txtProductDescription.Location = new Point(406, 185);
+            txtProductDescription.Location = new Point(488, 197);
             txtProductDescription.Name = "txtProductDescription";
             txtProductDescription.Size = new Size(121, 23);
             txtProductDescription.TabIndex = 16;
             // 
             // txtProductPrice
             // 
-            txtProductPrice.Location = new Point(406, 214);
+            txtProductPrice.Location = new Point(488, 226);
             txtProductPrice.Name = "txtProductPrice";
             txtProductPrice.Size = new Size(121, 23);
             txtProductPrice.TabIndex = 15;
             // 
             // txtProductName
             // 
-            txtProductName.Location = new Point(406, 156);
+            txtProductName.Location = new Point(488, 168);
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(121, 23);
             txtProductName.TabIndex = 14;
@@ -147,7 +147,7 @@
             // lblProductID
             // 
             lblProductID.AutoSize = true;
-            lblProductID.Location = new Point(322, 135);
+            lblProductID.Location = new Point(404, 147);
             lblProductID.Name = "lblProductID";
             lblProductID.Size = new Size(63, 15);
             lblProductID.TabIndex = 13;
@@ -155,7 +155,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(369, 330);
+            btnCancel.Location = new Point(451, 342);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(95, 23);
             btnCancel.TabIndex = 40;
@@ -165,7 +165,7 @@
             // 
             // txtSupplierId
             // 
-            txtSupplierId.Location = new Point(406, 301);
+            txtSupplierId.Location = new Point(488, 313);
             txtSupplierId.Name = "txtSupplierId";
             txtSupplierId.Size = new Size(121, 23);
             txtSupplierId.TabIndex = 41;
@@ -173,7 +173,7 @@
             // lblProductSupID
             // 
             lblProductSupID.AutoSize = true;
-            lblProductSupID.Location = new Point(321, 309);
+            lblProductSupID.Location = new Point(403, 321);
             lblProductSupID.Name = "lblProductSupID";
             lblProductSupID.Size = new Size(64, 15);
             lblProductSupID.TabIndex = 42;
@@ -200,7 +200,7 @@
             Controls.Add(txtProductName);
             Controls.Add(lblProductID);
             Name = "ProductAdd";
-            Size = new Size(800, 450);
+            Size = new Size(1080, 540);
             ResumeLayout(false);
             PerformLayout();
         }

@@ -29,7 +29,6 @@ namespace InventoryManagementSystem
             }
             // Load the current list of products
             List<Product> products = Product.LoadProducts();
-
             // Get and validate inputs (you might want to add more validation here)
             string name = txtProductName.Text;
             string description = txtProductDescription.Text;
@@ -45,7 +44,6 @@ namespace InventoryManagementSystem
                 MessageBox.Show("Please fill in all fields.");
                 return;
             }
-
             // 2. Validate Numerical Values
             if (!int.TryParse(txtProductID.Text, out productId) ||
                 !int.TryParse(txtProductQuantity.Text, out int quantity) ||
@@ -55,7 +53,6 @@ namespace InventoryManagementSystem
                 MessageBox.Show("Please enter valid numerical values for Product ID, Quantity, Price, and Supplier ID.");
                 return;
             }
-
             // 3. Category Selection
             string category = cmbCategory.SelectedItem.ToString();
 
@@ -70,14 +67,11 @@ namespace InventoryManagementSystem
             else
                 MessageBox.Show("An error occurred while adding the product.");
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Main mainForm = (Main)ParentForm;
             ProductManagementForm productManagementForm = new ProductManagementForm();
             mainForm.LoadUserControl(productManagementForm);
         }
-
-
     }
 }

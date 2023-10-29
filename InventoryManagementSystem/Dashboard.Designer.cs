@@ -37,7 +37,7 @@
             // 
             // ProdMgmntBttn
             // 
-            ProdMgmntBttn.Location = new Point(174, 175);
+            ProdMgmntBttn.Location = new Point(320, 230);
             ProdMgmntBttn.Name = "ProdMgmntBttn";
             ProdMgmntBttn.Size = new Size(141, 23);
             ProdMgmntBttn.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // SupMgmntBttn
             // 
-            SupMgmntBttn.Location = new Point(321, 175);
+            SupMgmntBttn.Location = new Point(467, 230);
             SupMgmntBttn.Name = "SupMgmntBttn";
             SupMgmntBttn.Size = new Size(150, 23);
             SupMgmntBttn.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // SalesMgmntBttn
             // 
-            SalesMgmntBttn.Location = new Point(477, 175);
+            SalesMgmntBttn.Location = new Point(623, 230);
             SalesMgmntBttn.Name = "SalesMgmntBttn";
             SalesMgmntBttn.Size = new Size(131, 23);
             SalesMgmntBttn.TabIndex = 2;
@@ -68,7 +68,7 @@
             // WelcomeLabel
             // 
             WelcomeLabel.AutoSize = true;
-            WelcomeLabel.Location = new Point(367, 157);
+            WelcomeLabel.Location = new Point(513, 212);
             WelcomeLabel.Name = "WelcomeLabel";
             WelcomeLabel.Size = new Size(60, 15);
             WelcomeLabel.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(352, 204);
+            btnLogout.Location = new Point(498, 259);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(88, 23);
             btnLogout.TabIndex = 4;
@@ -88,14 +88,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(btnLogout);
             Controls.Add(WelcomeLabel);
             Controls.Add(SalesMgmntBttn);
             Controls.Add(SupMgmntBttn);
             Controls.Add(ProdMgmntBttn);
             Name = "Dashboard";
-            Text = "Dashboard";
+            Size = new Size(1080, 540);
             ResumeLayout(false);
             PerformLayout();
         }
