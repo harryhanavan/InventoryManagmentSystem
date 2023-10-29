@@ -1,11 +1,16 @@
-SaleID,Date,Customer Details,TotalAmount
-1,25/09/2023,"Edward Los Angeles",7199.910000000001
-2,24/10/2023,"Charlie Phoenix",199.89999999999998
-3,03/10/2023,"Charlie Los Angeles",6539.900000000001
-4,09/10/2023,"Bob New York",9379.859999999999
-5,18/10/2023,"Alice Phoenix",159.92
-6,10/10/2023,"Edward Phoenix",7199.94
-7,18/10/2023,"Alice Chicago",779.89
-8,27/09/2023,"Bob Chicago",799.98
-9,18/10/2023,"Alice Los Angeles",6539.92
-10,29/09/2023,"Diana New York",4799.9400000000005
+SaleID,Date,Customer Details,Total Amount
+1,25/09/2023 12:00:00 AM,"Edward Los Angeles",7199.910000000001
+2,24/10/2023 12:00:00 AM,"Charlie Phoenix",199.89999999999998
+3,3/10/2023 12:00:00 AM,"Charlie Los Angeles",6539.900000000001
+4,9/10/2023 12:00:00 AM,"Bob New York",9379.859999999999
+5,18/10/2023 12:00:00 AM,"Alice Phoenix",159.92
+6,10/10/2023 12:00:00 AM,"Edward Phoenix",7199.94
+7,18/10/2023 12:00:00 AM,"Alice Chicago",779.89
+8,27/09/2023 12:00:00 AM,"Bob Chicago",799.98
+9,18/10/2023 12:00:00 AM,"Alice Los Angeles",6539.92
+10,29/09/2023 12:00:00 AM,"Diana New York",4799.9400000000005
+11,29/10/2023 7:07:47 PM,Justin California,0
+12,29/10/2023 7:09:45 PM,Andrew Phoenix,0
+13,29/10/2023 7:13:30 PM,John Arizona,0
+14,29/10/2023 7:16:45 PM,John Test State,0
+15,29/10/2023 7:17:51 PM,jpohn etst,7799.88

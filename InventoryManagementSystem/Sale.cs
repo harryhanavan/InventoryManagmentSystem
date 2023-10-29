@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace InventoryManagementSystem
 {
@@ -18,12 +20,13 @@ namespace InventoryManagementSystem
         private static string dataDirectory = "../../../Data/";
         private static string salesFilePath = Path.Combine(dataDirectory, "sales.csv");
         private static string saleItemsFilePath = Path.Combine(dataDirectory, "saleItems.csv");
-        public Sale(string customerDetails)
+        public Sale(string customerDetails, decimal totalAmount)
         {
             SaleID = GenerateNewSaleID();
             Date = DateTime.Now;
-            SaleItems = new List<SaleItem>();
+            SaleItems = SaleItem.LoadSaleItems();
             CustomerDetails = customerDetails;
+            TotalAmount = totalAmount;
         }
         public Sale(int saleID, DateTime date, List<SaleItem> saleItems, string customerDetails, decimal totalAmount)
         {
@@ -38,7 +41,7 @@ namespace InventoryManagementSystem
         {
             SaleItems.Add(item);
         }
-        public static bool RecordSale(Sale sale, List<Sale> sales)
+        public static bool RecordSale(List<Sale> sales)
         {
             try
             {
@@ -51,11 +54,10 @@ namespace InventoryManagementSystem
                 return false;
             }
         }
-        public static bool RecordSaleItem(SaleItem saleItem, List<SaleItem> saleItems)
+        public static bool RecordSaleItem(List<SaleItem> saleItems)
         {
             try
             {
-                Product.UpdateQuantity(saleItem.ProductID, saleItem.Quantity);
                 FileManager.WriteDataSaleItem(saleItemsFilePath, saleItems);
                 return true;
             }
@@ -66,16 +68,18 @@ namespace InventoryManagementSystem
             }
         }
 
-        public static List<Sale> ViewSales(List<Sale> sales)
+        public static void AddSale(Sale sale)
         {
-            // This method could be enhanced to filter sales based on dates, products, etc.
-            return sales;
+            List<Sale> saleList = Sale.LoadSales();
+            saleList.Add(sale);
+            Sale.RecordSale(saleList);
         }
 
-        public Sale CreateSale(string customerDetails)
+        public static void AddItemSale(SaleItem item)
         {
-            Sale sale = new Sale(customerDetails);
-            return sale;
+            List<SaleItem> saleList = SaleItem.LoadSaleItems();
+            saleList.Add(item);
+            Sale.RecordSaleItem(saleList);
         }
         private int GenerateNewSaleID()
         {
@@ -118,6 +122,17 @@ namespace InventoryManagementSystem
             }
 
             return sales;
+        }
+
+        public string[] ToCSV()
+        {
+            return new string[]
+            {
+                 SaleID.ToString(),
+                 Date.ToString(),
+                 CustomerDetails,
+                 TotalAmount.ToString(),
+            };
         }
 
     }

@@ -30,16 +30,18 @@ namespace InventoryManagementSystem
             Quantity = quantity;
             PricePerUnit = pricePerUnit;
         }
-        public void AddProductToSale(Sale sale, Product product, int quantity)
+        public static SaleItem AddProductToSale(Sale sale, Product product, int quantity)
         {            
-            SaleItemID = SaleItem.GenerateNewSaleItemID();
-            SaleID = sale.SaleID;
-            ProductID = product.ProductID;
-            Quantity = quantity;
-            PricePerUnit = product.Price;
+            int SaleItemID = SaleItem.GenerateNewSaleItemID();
+            int SaleID = sale.SaleID;
+            int  ProductID = product.ProductID;
+            int Quantity = quantity;
+            decimal PricePerUnit = product.Price;
             SaleItem saleItem = new SaleItem(SaleID, SaleItemID, ProductID, Quantity, PricePerUnit);
             sale.AddSaleItem(saleItem); // Add the sale item to the sale
-            Product.UpdateQuantity(quantity, product.ProductID); // Update the product quantity
+            Product.UpdateQuantity(quantity, product.ProductID);
+
+            return saleItem;// Update the product quantity
         }
         private static int GenerateNewSaleItemID()
         {
@@ -71,6 +73,18 @@ namespace InventoryManagementSystem
             }
             return saleItems;
             
+        }
+
+        public string[] ToCSV()
+        {
+            return new string[]
+            {
+                 SaleID.ToString(),
+                 SaleItemID.ToString(),
+                 ProductID.ToString(),
+                 Quantity.ToString(),
+                 PricePerUnit.ToString(),
+            };
         }
     }
 }

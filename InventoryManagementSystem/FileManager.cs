@@ -73,16 +73,16 @@ namespace InventoryManagementSystem
                 Console.WriteLine($"An error occurred while writing data to the Product file: {ex.Message}");
             }
         }
-        public static bool WriteDataSale(string filePath, List<Sale> data)
+        public static bool WriteDataSale(string filePath, List<Sale> sales)
         {
             try
             {
                 using (StreamWriter writer = new StreamWriter(filePath, false))
                 {
                     writer.WriteLine("SaleID,Date,Customer Details,Total Amount");
-                    foreach (var record in data)
+                    foreach (var sale in sales)
                     {
-                        writer.WriteLine(string.Join(",", record));
+                        writer.WriteLine(string.Join(",", sale.ToCSV()));
                     }
                 }
                 return true;
@@ -93,16 +93,16 @@ namespace InventoryManagementSystem
                 return false;
             }
         }
-        public static bool WriteDataSaleItem(string filePath, List<SaleItem> data)
+        public static bool WriteDataSaleItem(string filePath, List<SaleItem> saleItems)
         {
             try
             {
                 using (StreamWriter writer = new StreamWriter(filePath, false))
                 {
                     writer.WriteLine("SaleID,Date,Customer Details,Total Amount");
-                    foreach (var record in data)
+                    foreach (var sale in saleItems)
                     {
-                        writer.WriteLine(string.Join(",", record));
+                        writer.WriteLine(string.Join(",", sale.ToCSV()));
                     }
                 }
                 return true;

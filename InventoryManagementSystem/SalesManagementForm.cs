@@ -48,5 +48,20 @@ namespace InventoryManagementSystem
                 mainForm.LoadUserControl(salesViewForm);
             }
         }
+
+        private void btnAddSale_Click(object sender, EventArgs e)
+        {
+            Control parentControl = this.Parent;
+            while (!(parentControl is Main) && parentControl != null)
+            {
+                parentControl = parentControl.Parent;
+            }
+
+            if (parentControl is Main mainForm)
+            {
+                SalesAddForm salesAddForm = new SalesAddForm();
+                mainForm.LoadUserControl(salesAddForm);
+            }
+        }
     }
 }
