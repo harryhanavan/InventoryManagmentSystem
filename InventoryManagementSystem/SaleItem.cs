@@ -59,10 +59,10 @@ namespace InventoryManagementSystem
         public static List<SaleItem> LoadSaleItems() {
             List<SaleItem> saleItems = new List<SaleItem>();
             List<string[]> data = FileManager.ReadData(saleItemsFilePath);
-            foreach (var record in data)
+            foreach (var record in data.Skip(1))
             {
-                int saleID = int.Parse(record[0]);
-                int saleItemID = int.Parse(record[1]);
+                int saleItemID = int.Parse(record[0]);
+                int saleID = int.Parse(record[1]);
                 int productID = int.Parse(record[2]);
                 int quantity = int.Parse(record[3]);
                 decimal pricePerUnit = decimal.Parse(record[4]);

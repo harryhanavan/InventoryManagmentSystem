@@ -38,9 +38,10 @@
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(16, 8);
+            btnRefresh.Location = new Point(18, 11);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(75, 23);
+            btnRefresh.Size = new Size(86, 31);
             btnRefresh.TabIndex = 0;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(692, 8);
+            btnSearch.Location = new Point(791, 11);
+            btnSearch.Margin = new Padding(3, 4, 3, 4);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 23);
+            btnSearch.Size = new Size(86, 31);
             btnSearch.TabIndex = 2;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
@@ -58,16 +60,18 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(586, 9);
+            textBox1.Location = new Point(670, 12);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(114, 27);
             textBox1.TabIndex = 3;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(692, 261);
+            btnBack.Location = new Point(791, 348);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 23);
+            btnBack.Size = new Size(86, 31);
             btnBack.TabIndex = 4;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -76,23 +80,27 @@
             // dataGridViewSuppliers
             // 
             dataGridViewSuppliers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewSuppliers.Location = new Point(16, 37);
+            dataGridViewSuppliers.Location = new Point(18, 49);
+            dataGridViewSuppliers.Margin = new Padding(3, 4, 3, 4);
             dataGridViewSuppliers.Name = "dataGridViewSuppliers";
+            dataGridViewSuppliers.RowHeadersWidth = 51;
             dataGridViewSuppliers.RowTemplate.Height = 25;
-            dataGridViewSuppliers.Size = new Size(751, 218);
+            dataGridViewSuppliers.Size = new Size(858, 291);
             dataGridViewSuppliers.TabIndex = 5;
+            dataGridViewSuppliers.CellContentClick += dataGridViewSuppliers_CellContentClick;
             // 
             // SupplierView
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridViewSuppliers);
             Controls.Add(btnBack);
             Controls.Add(textBox1);
             Controls.Add(btnSearch);
             Controls.Add(btnRefresh);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "SupplierView";
-            Size = new Size(781, 320);
+            Size = new Size(893, 427);
             ((System.ComponentModel.ISupportInitialize)dataGridViewSuppliers).EndInit();
             ResumeLayout(false);
             PerformLayout();

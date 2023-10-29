@@ -100,5 +100,9 @@ namespace InventoryManagementSystem
             }
         }
 
+        private void dataGridViewSuppliers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

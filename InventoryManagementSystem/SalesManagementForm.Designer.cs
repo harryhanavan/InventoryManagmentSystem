@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBack = new Button();
+            btnBack = new Button();
             btnViewSales = new Button();
             btnViewOrders = new Button();
             btnAddOrder = new Button();
@@ -37,14 +37,14 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new Point(395, 395);
-            this.btnBack.Margin = new Padding(3, 4, 3, 4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new Size(86, 31);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += this.btnBack_Click;
+            btnBack.Location = new Point(395, 395);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(86, 31);
+            btnBack.TabIndex = 0;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // btnViewSales
             // 
@@ -55,6 +55,7 @@
             btnViewSales.TabIndex = 1;
             btnViewSales.Text = "View Sales";
             btnViewSales.UseVisualStyleBackColor = true;
+            btnViewSales.Click += btnViewSales_Click;
             // 
             // btnViewOrders
             // 
@@ -94,7 +95,7 @@
             Controls.Add(btnAddOrder);
             Controls.Add(btnViewOrders);
             Controls.Add(btnViewSales);
-            Controls.Add(this.btnBack);
+            Controls.Add(btnBack);
             Margin = new Padding(3, 4, 3, 4);
             Name = "SalesManagementForm";
             Size = new Size(914, 600);
