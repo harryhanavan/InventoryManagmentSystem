@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
-      "WinForms.DataVisualization/1.9.0": {
+      "WinForms.DataVisualization/1.9.1": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
@@ -24,10 +24,10 @@
     }
   },
   "libraries": {
-    "WinForms.DataVisualization/1.9.0": {
-      "sha512": "lRhRPS40V3o5dY38NwaIZyOPrD+bbFq+UjNCa/eAucMICrSFVUE9rO6H2G73xx65mZ94Q7lYw4BSaZRPlcxhxQ==",
+    "WinForms.DataVisualization/1.9.1": {
+      "sha512": "/mKuUVwHYg0EpcjJbuvU5eGY8QGFB4iUMVEl0inHE5iF1fG/NK1dRR2sL26QDnv1wG0dnpuhE3jO5ktKQlvEGg==",
       "type": "package",
-      "path": "winforms.datavisualization/1.9.0",
+      "path": "winforms.datavisualization/1.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -57,30 +57,30 @@
         "lib/net7.0-windows7.0/WinForms.DataVisualization.dll",
         "lib/net7.0-windows7.0/WinForms.DataVisualization.pdb",
         "lib/net7.0-windows7.0/WinForms.DataVisualization.xml",
-        "winforms.datavisualization.1.9.0.nupkg.sha512",
+        "winforms.datavisualization.1.9.1.nupkg.sha512",
         "winforms.datavisualization.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "WinForms.DataVisualization >= 1.9.0"
+      "WinForms.DataVisualization >= 1.9.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\harry\\.nuget\\packages\\": {}
+    "C:\\Users\\hhanavan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\hhanavan\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
       "projectName": "InventoryManagementSystem",
-      "projectPath": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\harry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\harry\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\obj\\",
+      "projectPath": "C:\\Users\\hhanavan\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\InventoryManagementSystem.csproj",
+      "packagesPath": "C:\\Users\\hhanavan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hhanavan\\Documents\\GitHub\\InventoryManagmentSystem\\InventoryManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\harry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hhanavan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -108,7 +108,7 @@
         "dependencies": {
           "WinForms.DataVisualization": {
             "target": "Package",
-            "version": "[1.9.0, )"
+            "version": "[1.9.1, )"
           }
         },
         "imports": [
@@ -130,7 +130,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
