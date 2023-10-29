@@ -98,4 +98,3 @@ C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSyst
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
 C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.csproj.CopyComplete
-C:\Users\harry\Documents\GitHub\InventoryManagmentSystem\InventoryManagementSystem\obj\Debug\net6.0-windows\InventoryManagementSystem.testing.resources

@@ -36,17 +36,17 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(359, 235);
+            btnBack.Location = new Point(473, 279);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 23);
+            btnBack.Size = new Size(138, 23);
             btnBack.TabIndex = 1;
-            btnBack.Text = "Back";
+            btnBack.Text = "Back to Dashboard";
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
             // btnViewSuppliers
             // 
-            btnViewSuppliers.Location = new Point(183, 206);
+            btnViewSuppliers.Location = new Point(329, 229);
             btnViewSuppliers.Name = "btnViewSuppliers";
             btnViewSuppliers.Size = new Size(138, 23);
             btnViewSuppliers.TabIndex = 2;
@@ -56,7 +56,7 @@
             // 
             // btnAddSuppliers
             // 
-            btnAddSuppliers.Location = new Point(327, 206);
+            btnAddSuppliers.Location = new Point(473, 229);
             btnAddSuppliers.Name = "btnAddSuppliers";
             btnAddSuppliers.Size = new Size(138, 23);
             btnAddSuppliers.TabIndex = 3;
@@ -66,7 +66,7 @@
             // 
             // btnEditSuppliers
             // 
-            btnEditSuppliers.Location = new Point(471, 206);
+            btnEditSuppliers.Location = new Point(617, 229);
             btnEditSuppliers.Name = "btnEditSuppliers";
             btnEditSuppliers.Size = new Size(138, 23);
             btnEditSuppliers.TabIndex = 4;
@@ -83,7 +83,7 @@
             Controls.Add(btnViewSuppliers);
             Controls.Add(btnBack);
             Name = "SupplierManagementForm";
-            Size = new Size(800, 450);
+            Size = new Size(1080, 540);
             ResumeLayout(false);
         }
 

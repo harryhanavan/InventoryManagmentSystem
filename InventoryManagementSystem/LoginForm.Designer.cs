@@ -40,7 +40,7 @@
             // 
             // UsernameEntry
             // 
-            UsernameEntry.Location = new Point(357, 144);
+            UsernameEntry.Location = new Point(470, 216);
             UsernameEntry.Multiline = true;
             UsernameEntry.Name = "UsernameEntry";
             UsernameEntry.Size = new Size(100, 23);
@@ -49,7 +49,7 @@
             // 
             // PasswordEntry
             // 
-            PasswordEntry.Location = new Point(357, 173);
+            PasswordEntry.Location = new Point(470, 245);
             PasswordEntry.Name = "PasswordEntry";
             PasswordEntry.PasswordChar = '*';
             PasswordEntry.Size = new Size(100, 23);
@@ -59,7 +59,7 @@
             // UsernameLabel
             // 
             UsernameLabel.AutoSize = true;
-            UsernameLabel.Location = new Point(291, 147);
+            UsernameLabel.Location = new Point(404, 219);
             UsernameLabel.Name = "UsernameLabel";
             UsernameLabel.Size = new Size(60, 15);
             UsernameLabel.TabIndex = 2;
@@ -68,7 +68,7 @@
             // PasswordLabel
             // 
             PasswordLabel.AutoSize = true;
-            PasswordLabel.Location = new Point(294, 176);
+            PasswordLabel.Location = new Point(407, 248);
             PasswordLabel.Name = "PasswordLabel";
             PasswordLabel.Size = new Size(57, 15);
             PasswordLabel.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             // LoginButton
             // 
-            LoginButton.Location = new Point(327, 202);
+            LoginButton.Location = new Point(440, 274);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(75, 23);
             LoginButton.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             // LoginCancelButton
             // 
-            LoginCancelButton.Location = new Point(408, 202);
+            LoginCancelButton.Location = new Point(521, 274);
             LoginCancelButton.Name = "LoginCancelButton";
             LoginCancelButton.Size = new Size(75, 23);
             LoginCancelButton.TabIndex = 5;
@@ -97,7 +97,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(327, 97);
+            label3.Location = new Point(440, 169);
             label3.Name = "label3";
             label3.Size = new Size(172, 15);
             label3.TabIndex = 6;
@@ -106,7 +106,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(375, 126);
+            label4.Location = new Point(488, 198);
             label4.Name = "label4";
             label4.Size = new Size(66, 15);
             label4.TabIndex = 7;
@@ -116,7 +116,6 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(LoginCancelButton);
@@ -126,7 +125,7 @@
             Controls.Add(PasswordEntry);
             Controls.Add(UsernameEntry);
             Name = "LoginForm";
-            Text = "Form1";
+            Size = new Size(1080, 540);
             Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();

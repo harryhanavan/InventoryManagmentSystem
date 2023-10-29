@@ -49,7 +49,7 @@
             // lblSupplierCity
             // 
             lblSupplierCity.AutoSize = true;
-            lblSupplierCity.Location = new Point(283, 197);
+            lblSupplierCity.Location = new Point(440, 301);
             lblSupplierCity.Name = "lblSupplierCity";
             lblSupplierCity.Size = new Size(28, 15);
             lblSupplierCity.TabIndex = 58;
@@ -57,14 +57,14 @@
             // 
             // txtSupplierCity
             // 
-            txtSupplierCity.Location = new Point(332, 189);
+            txtSupplierCity.Location = new Point(489, 293);
             txtSupplierCity.Name = "txtSupplierCity";
             txtSupplierCity.Size = new Size(121, 23);
             txtSupplierCity.TabIndex = 57;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(295, 218);
+            btnCancel.Location = new Point(452, 322);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(95, 23);
             btnCancel.TabIndex = 56;
@@ -74,7 +74,7 @@
             // 
             // btnAddSupplier
             // 
-            btnAddSupplier.Location = new Point(396, 218);
+            btnAddSupplier.Location = new Point(553, 322);
             btnAddSupplier.Name = "btnAddSupplier";
             btnAddSupplier.Size = new Size(95, 23);
             btnAddSupplier.TabIndex = 55;
@@ -85,7 +85,7 @@
             // cmbCategory
             // 
             cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(332, 131);
+            cmbCategory.Location = new Point(489, 235);
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(121, 23);
             cmbCategory.TabIndex = 54;
@@ -93,7 +93,7 @@
             // lblSupplierAddress
             // 
             lblSupplierAddress.AutoSize = true;
-            lblSupplierAddress.Location = new Point(262, 168);
+            lblSupplierAddress.Location = new Point(419, 272);
             lblSupplierAddress.Name = "lblSupplierAddress";
             lblSupplierAddress.Size = new Size(49, 15);
             lblSupplierAddress.TabIndex = 53;
@@ -102,7 +102,7 @@
             // lblSupplierCategory
             // 
             lblSupplierCategory.AutoSize = true;
-            lblSupplierCategory.Location = new Point(256, 139);
+            lblSupplierCategory.Location = new Point(413, 243);
             lblSupplierCategory.Name = "lblSupplierCategory";
             lblSupplierCategory.Size = new Size(55, 15);
             lblSupplierCategory.TabIndex = 52;
@@ -111,7 +111,7 @@
             // lblSupplierContact
             // 
             lblSupplierContact.AutoSize = true;
-            lblSupplierContact.Location = new Point(240, 110);
+            lblSupplierContact.Location = new Point(397, 214);
             lblSupplierContact.Name = "lblSupplierContact";
             lblSupplierContact.Size = new Size(71, 15);
             lblSupplierContact.TabIndex = 51;
@@ -120,7 +120,7 @@
             // lblSupplierEmail
             // 
             lblSupplierEmail.AutoSize = true;
-            lblSupplierEmail.Location = new Point(275, 81);
+            lblSupplierEmail.Location = new Point(432, 185);
             lblSupplierEmail.Name = "lblSupplierEmail";
             lblSupplierEmail.Size = new Size(36, 15);
             lblSupplierEmail.TabIndex = 50;
@@ -129,7 +129,7 @@
             // lblSupplierName
             // 
             lblSupplierName.AutoSize = true;
-            lblSupplierName.Location = new Point(272, 52);
+            lblSupplierName.Location = new Point(429, 156);
             lblSupplierName.Name = "lblSupplierName";
             lblSupplierName.Size = new Size(39, 15);
             lblSupplierName.TabIndex = 49;
@@ -137,35 +137,35 @@
             // 
             // txtSupplierAddress
             // 
-            txtSupplierAddress.Location = new Point(332, 160);
+            txtSupplierAddress.Location = new Point(489, 264);
             txtSupplierAddress.Name = "txtSupplierAddress";
             txtSupplierAddress.Size = new Size(121, 23);
             txtSupplierAddress.TabIndex = 48;
             // 
             // txtSupplierID
             // 
-            txtSupplierID.Location = new Point(332, 15);
+            txtSupplierID.Location = new Point(489, 119);
             txtSupplierID.Name = "txtSupplierID";
             txtSupplierID.Size = new Size(121, 23);
             txtSupplierID.TabIndex = 47;
             // 
             // txtSupplierEmail
             // 
-            txtSupplierEmail.Location = new Point(332, 73);
+            txtSupplierEmail.Location = new Point(489, 177);
             txtSupplierEmail.Name = "txtSupplierEmail";
             txtSupplierEmail.Size = new Size(121, 23);
             txtSupplierEmail.TabIndex = 46;
             // 
             // txtSupplierContact
             // 
-            txtSupplierContact.Location = new Point(332, 102);
+            txtSupplierContact.Location = new Point(489, 206);
             txtSupplierContact.Name = "txtSupplierContact";
             txtSupplierContact.Size = new Size(121, 23);
             txtSupplierContact.TabIndex = 45;
             // 
             // txtSupplierName
             // 
-            txtSupplierName.Location = new Point(332, 44);
+            txtSupplierName.Location = new Point(489, 148);
             txtSupplierName.Name = "txtSupplierName";
             txtSupplierName.Size = new Size(121, 23);
             txtSupplierName.TabIndex = 44;
@@ -173,7 +173,7 @@
             // lblSupplierID
             // 
             lblSupplierID.AutoSize = true;
-            lblSupplierID.Location = new Point(247, 23);
+            lblSupplierID.Location = new Point(404, 127);
             lblSupplierID.Name = "lblSupplierID";
             lblSupplierID.Size = new Size(64, 15);
             lblSupplierID.TabIndex = 43;
@@ -200,7 +200,7 @@
             Controls.Add(txtSupplierName);
             Controls.Add(lblSupplierID);
             Name = "SupplierAdd";
-            Size = new Size(690, 257);
+            Size = new Size(1080, 540);
             ResumeLayout(false);
             PerformLayout();
         }

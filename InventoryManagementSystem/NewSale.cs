@@ -77,7 +77,7 @@ namespace InventoryManagementSystem
                     {
                         if (cartItem.Quantity > cartItem.Product.Quantity)
                         {
-                            MessageBox.Show($"Not enough stock for product: {cartItem.Product.Name}"); 
+                            MessageBox.Show($"Not enough stock for product: {cartItem.Product.Name}");
                             return;
                         }
                         SaleItem.AddProductToSale(sale, cartItem.Product, cartItem.Quantity);

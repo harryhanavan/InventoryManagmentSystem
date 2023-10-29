@@ -11,6 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// 
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -42,7 +43,7 @@
             label4 = new Label();
             cmbSupplier = new ComboBox();
             label3 = new Label();
-            comboBox1 = new ComboBox();
+            cmbPrice = new ComboBox();
             label2 = new Label();
             label1 = new Label();
             cmbCategory = new ComboBox();
@@ -54,7 +55,7 @@
             // 
             // btnAddForm
             // 
-            btnAddForm.Location = new Point(317, 340);
+            btnAddForm.Location = new Point(477, 360);
             btnAddForm.Name = "btnAddForm";
             btnAddForm.Size = new Size(121, 23);
             btnAddForm.TabIndex = 0;
@@ -64,7 +65,7 @@
             // 
             // btnEditForm
             // 
-            btnEditForm.Location = new Point(444, 340);
+            btnEditForm.Location = new Point(604, 360);
             btnEditForm.Name = "btnEditForm";
             btnEditForm.Size = new Size(121, 23);
             btnEditForm.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             // btnViewProducts
             // 
-            btnViewProducts.Location = new Point(169, 340);
+            btnViewProducts.Location = new Point(329, 360);
             btnViewProducts.Name = "btnViewProducts";
             btnViewProducts.Size = new Size(142, 23);
             btnViewProducts.TabIndex = 3;
@@ -84,7 +85,7 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(307, 385);
+            btnBack.Location = new Point(467, 405);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(144, 23);
             btnBack.TabIndex = 4;
@@ -100,7 +101,7 @@
             ProductChart.Legends.Add(legend1);
             ProductChart.Location = new Point(16, 101);
             ProductChart.Name = "ProductChart";
-            ProductChart.Size = new Size(781, 233);
+            ProductChart.Size = new Size(1046, 233);
             ProductChart.TabIndex = 5;
             ProductChart.Text = "chart1";
             title1.Name = "Title1";
@@ -114,7 +115,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(540, 46);
+            label5.Location = new Point(815, 54);
             label5.Name = "label5";
             label5.Size = new Size(166, 15);
             label5.TabIndex = 20;
@@ -132,11 +133,12 @@
             // cmbSupplier
             // 
             cmbSupplier.FormattingEnabled = true;
-            cmbSupplier.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbSupplier.Items.AddRange(new object[] { "All", "1", "2", "3", "4", "5", "6", "7", "8", "9" });
             cmbSupplier.Location = new Point(341, 64);
             cmbSupplier.Name = "cmbSupplier";
             cmbSupplier.Size = new Size(121, 23);
             cmbSupplier.TabIndex = 18;
+            cmbSupplier.SelectedIndexChanged += cmbSupplier_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -147,14 +149,15 @@
             label3.TabIndex = 17;
             label3.Text = "Price";
             // 
-            // comboBox1
+            // cmbPrice
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Below $50", "$50 - $100", "$100 - $150", "$150-$300", "$300+" });
-            comboBox1.Location = new Point(190, 63);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 16;
+            cmbPrice.FormattingEnabled = true;
+            cmbPrice.Items.AddRange(new object[] { "All", "Below $50", "$50 - $100", "$100 - $150", "$150-$300", "$300+" });
+            cmbPrice.Location = new Point(190, 63);
+            cmbPrice.Name = "cmbPrice";
+            cmbPrice.Size = new Size(121, 23);
+            cmbPrice.TabIndex = 16;
+            cmbPrice.SelectedIndexChanged += cmbPrice_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -181,17 +184,18 @@
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(121, 23);
             cmbCategory.TabIndex = 13;
+            cmbCategory.SelectedIndexChanged += cmbCategory_SelectedIndexChanged;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(532, 64);
+            txtSearch.Location = new Point(807, 72);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(174, 23);
             txtSearch.TabIndex = 12;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(712, 63);
+            btnSearch.Location = new Point(987, 71);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 11;
@@ -207,7 +211,7 @@
             Controls.Add(label4);
             Controls.Add(cmbSupplier);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbPrice);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(cmbCategory);
@@ -219,7 +223,7 @@
             Controls.Add(btnEditForm);
             Controls.Add(btnAddForm);
             Name = "ProductManagementForm";
-            Size = new Size(800, 450);
+            Size = new Size(1080, 540);
             Load += ProductManagementForm_Load;
             ((System.ComponentModel.ISupportInitialize)ProductChart).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
@@ -239,11 +243,12 @@
         private Label label4;
         private ComboBox cmbSupplier;
         private Label label3;
-        private ComboBox comboBox1;
+        private ComboBox cmbPrice;
         private Label label2;
         private Label label1;
         private ComboBox cmbCategory;
         private TextBox txtSearch;
         private Button btnSearch;
+
     }
 }

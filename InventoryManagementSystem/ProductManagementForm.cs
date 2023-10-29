@@ -19,6 +19,7 @@ namespace InventoryManagementSystem
         {
             InitializeComponent();
             cmbCategory.DataSource = Enum.GetValues(typeof(ProductCategory));
+
         }
         private void ProductManagementForm_Load(object sender, EventArgs e)
         {
@@ -59,7 +60,7 @@ namespace InventoryManagementSystem
                 mainForm.LoadUserControl(loginForm);
             }
         }
-        private void LoadProductDataIntoChart(string category = null, string searchTerm = null)
+        private void LoadProductDataIntoChart(string category = null, string searchTerm = null, string selectedPriceRange = null, int? selectedSupplierID = null)
         {
             ProductChart.Series.Clear();
             Series series = new Series
@@ -67,11 +68,17 @@ namespace InventoryManagementSystem
                 Name = "Stock Level",
                 ChartType = SeriesChartType.Column
             };
-
             ProductChart.Series.Add(series);
             List<Product> products = Product.LoadProducts();
+            // Filtering products based on the selected category, search term, price range, and supplier ID.
+            var filteredProducts = products
+                .Where(p => string.IsNullOrEmpty(searchTerm) || p.ProductID.ToString().Contains(searchTerm) || p.Name.ToLower().Contains(searchTerm))
+                .Where(p => category == "All" || string.IsNullOrEmpty(category) || p.Category.ToString() == category)
+                .Where(p => string.IsNullOrEmpty(selectedPriceRange) || PriceInRange(p.Price, selectedPriceRange))
+                .Where(p => selectedSupplierID == -1 || !selectedSupplierID.HasValue || p.SupplierID == selectedSupplierID.Value)
+                .ToList();
             int count = 0;
-            foreach (var product in products)
+            foreach (var product in filteredProducts)
             {
                 series.Points.Add(product.Quantity);
                 series.Points[count].AxisLabel = product.Name;
@@ -117,36 +124,87 @@ namespace InventoryManagementSystem
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedCategory = cmbCategory.SelectedItem.ToString();
-            LoadProductDataIntoChart(category: selectedCategory);
+            string selectedPriceRange = cmbPrice.SelectedItem as string;
+            int? selectedSupplierID = null;
+            if (cmbSupplier.SelectedItem != null) // Checking if SelectedItem is not null
+            {
+                if (int.TryParse(cmbSupplier.SelectedItem.ToString(), out int parsedSupplierID))
+                {
+                    selectedSupplierID = parsedSupplierID;
+                }
+                else if (cmbSupplier.SelectedItem.ToString() == "All") // Assuming "All" is a string in the ComboBox
+                {
+                    selectedSupplierID = -1;
+                }
+            }
+            LoadProductDataIntoChart(category: selectedCategory, selectedPriceRange: selectedPriceRange, selectedSupplierID: selectedSupplierID);
+        }
+        private void cmbPrice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedCategory = cmbCategory.SelectedItem?.ToString();
+            string selectedPriceRange = cmbPrice.SelectedItem?.ToString();
+            int? selectedSupplierID = null;
+
+            if (cmbSupplier.SelectedItem != null)
+            {
+                if (int.TryParse(cmbSupplier.SelectedItem.ToString(), out int parsedSupplierID))
+                {
+                    selectedSupplierID = parsedSupplierID;
+                }
+                else if (cmbSupplier.SelectedItem.ToString() == "All") // Assuming "All" is a string in the ComboBox
+                {
+                    selectedSupplierID = -1;
+                }
+            }
+
+            LoadProductDataIntoChart(category: selectedCategory, selectedPriceRange: selectedPriceRange, selectedSupplierID: selectedSupplierID);
         }
 
+        private void cmbSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedCategory = cmbCategory.SelectedItem?.ToString();
+            string selectedPriceRange = cmbPrice.SelectedItem?.ToString();
+            int? selectedSupplierID = null;
+            if (cmbSupplier.SelectedItem != null) // Checking if SelectedItem is not null
+            {
+                if (int.TryParse(cmbSupplier.SelectedItem.ToString(), out int parsedSupplierID))
+                {
+                    selectedSupplierID = parsedSupplierID;
+                }
+                else if (cmbSupplier.SelectedItem.ToString() == "All") // Assuming "All" is a string in the ComboBox
+                {
+                    selectedSupplierID = -1;
+                }
+            }
+            LoadProductDataIntoChart(category: selectedCategory, selectedPriceRange: selectedPriceRange, selectedSupplierID: selectedSupplierID);
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
             string searchTerm = string.IsNullOrWhiteSpace(txtSearch.Text) ? null : txtSearch.Text.ToLower();
-            string selectedCategory = cmbCategory.SelectedItem as string;
-            string selectedPriceRange = comboBox1.SelectedItem as string;
-            int selectedSupplierID = -1; // Default value
-            if (cmbSupplier.SelectedItem != null && int.TryParse(cmbSupplier.SelectedItem.ToString(), out int parsedSupplierID))
-            {
-                selectedSupplierID = parsedSupplierID;
+            string selectedCategory = cmbCategory.SelectedItem?.ToString();
+            string selectedPriceRange = cmbPrice.SelectedItem as string;
+            int? selectedSupplierID = null;
 
-                Console.WriteLine($"Selected Supplier ID: {selectedSupplierID}"); // Debugging output
-            }
-            else
+            if (cmbSupplier.SelectedItem != null)
             {
-                Console.WriteLine("No Supplier ID selected or failed to parse."); // Debugging output
+                if (int.TryParse(cmbSupplier.SelectedItem.ToString(), out int parsedSupplierID))
+                {
+                    selectedSupplierID = parsedSupplierID;
+                }
+                else if (cmbSupplier.SelectedItem.ToString() == "All") // Assuming "All" is a string in the ComboBox
+                {
+                    selectedSupplierID = -1; // Or you can keep it null
+                }
             }
-
 
             List<Product> products = Product.LoadProducts();
-
             var filteredProducts = products
                 .Where(p => string.IsNullOrEmpty(searchTerm) || p.ProductID.ToString().Contains(searchTerm) || p.Name.ToLower().Contains(searchTerm))
-                .Where(p => string.IsNullOrEmpty(selectedCategory) || p.Category.ToString() == selectedCategory)
+                .Where(p => selectedCategory == "All" || string.IsNullOrEmpty(selectedCategory) || p.Category.ToString() == selectedCategory)
                 .Where(p => string.IsNullOrEmpty(selectedPriceRange) || PriceInRange(p.Price, selectedPriceRange))
-                .Where(p => cmbSupplier.SelectedItem == null || (p.SupplierID == selectedSupplierID))
+                .Where(p => selectedSupplierID == -1 || !selectedSupplierID.HasValue || p.SupplierID == selectedSupplierID.Value)
                 .ToList();
+
             // Clear previous data
             ProductChart.Series["Stock Level"].Points.Clear();
 
@@ -159,12 +217,13 @@ namespace InventoryManagementSystem
             // Refresh the chart
             ProductChart.Invalidate();
             ProductChart.Update();
-
         }
         private bool PriceInRange(decimal price, string selectedPriceRange)
         {
             switch (selectedPriceRange)
             {
+                case "All":
+                    return true; // No price filter
                 case "Below $50":
                     return price < 50;
                 case "$50 - $100":

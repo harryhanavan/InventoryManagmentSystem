@@ -8,6 +8,7 @@ namespace InventoryManagementSystem
 {
     public enum SupplierCategory
     {
+        All,
         Computers,
         Smartphones,
         Electronics,

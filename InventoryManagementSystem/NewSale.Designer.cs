@@ -46,14 +46,14 @@
             // productComboBox
             // 
             productComboBox.FormattingEnabled = true;
-            productComboBox.Location = new Point(73, 165);
+            productComboBox.Location = new Point(201, 219);
             productComboBox.Name = "productComboBox";
             productComboBox.Size = new Size(211, 23);
             productComboBox.TabIndex = 0;
             // 
             // quantityTextBox
             // 
-            quantityTextBox.Location = new Point(290, 165);
+            quantityTextBox.Location = new Point(418, 219);
             quantityTextBox.Name = "quantityTextBox";
             quantityTextBox.Size = new Size(31, 23);
             quantityTextBox.TabIndex = 1;
@@ -62,14 +62,14 @@
             // 
             cartListBox.FormattingEnabled = true;
             cartListBox.ItemHeight = 15;
-            cartListBox.Location = new Point(341, 93);
+            cartListBox.Location = new Point(640, 201);
             cartListBox.Name = "cartListBox";
             cartListBox.Size = new Size(352, 154);
             cartListBox.TabIndex = 2;
             // 
             // btnAddToCart
             // 
-            btnAddToCart.Location = new Point(140, 194);
+            btnAddToCart.Location = new Point(268, 248);
             btnAddToCart.Name = "btnAddToCart";
             btnAddToCart.Size = new Size(121, 23);
             btnAddToCart.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // btnBuy
             // 
-            btnBuy.Location = new Point(618, 253);
+            btnBuy.Location = new Point(917, 361);
             btnBuy.Name = "btnBuy";
             btnBuy.Size = new Size(75, 23);
             btnBuy.TabIndex = 4;
@@ -89,7 +89,7 @@
             // 
             // searchText
             // 
-            searchText.Location = new Point(140, 101);
+            searchText.Location = new Point(268, 155);
             searchText.Name = "searchText";
             searchText.Size = new Size(100, 23);
             searchText.TabIndex = 5;
@@ -97,7 +97,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(282, 147);
+            label1.Location = new Point(410, 201);
             label1.Name = "label1";
             label1.Size = new Size(53, 15);
             label1.TabIndex = 6;
@@ -106,7 +106,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(26, 104);
+            label2.Location = new Point(154, 158);
             label2.Name = "label2";
             label2.Size = new Size(108, 15);
             label2.TabIndex = 7;
@@ -114,7 +114,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(246, 100);
+            btnSearch.Location = new Point(374, 154);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 8;
@@ -123,7 +123,7 @@
             // 
             // customerDetailsTextBox
             // 
-            customerDetailsTextBox.Location = new Point(58, 243);
+            customerDetailsTextBox.Location = new Point(186, 297);
             customerDetailsTextBox.Multiline = true;
             customerDetailsTextBox.Name = "customerDetailsTextBox";
             customerDetailsTextBox.Size = new Size(277, 90);
@@ -132,7 +132,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(58, 225);
+            label3.Location = new Point(186, 279);
             label3.Name = "label3";
             label3.Size = new Size(97, 15);
             label3.TabIndex = 10;
@@ -141,7 +141,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(341, 75);
+            label4.Location = new Point(640, 183);
             label4.Name = "label4";
             label4.Size = new Size(29, 15);
             label4.TabIndex = 11;
@@ -149,11 +149,11 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(618, 349);
+            btnBack.Location = new Point(3, 3);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(75, 23);
             btnBack.TabIndex = 12;
-            btnBack.Text = "Back";
+            btnBack.Text = "< Back";
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
@@ -175,7 +175,7 @@
             Controls.Add(quantityTextBox);
             Controls.Add(productComboBox);
             Name = "NewSale";
-            Size = new Size(709, 375);
+            Size = new Size(1080, 540);
             Load += NewSale_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -27,12 +27,12 @@ namespace InventoryManagementSystem
         {
             try
             {
-            int productId = int.Parse(txtProductID.Text);
-            if (Product.Exists(productId)) // Assuming you have an Exists method in your Product class
-            {
-                MessageBox.Show("A product with this ID already exists. Please enter a unique Product ID.");
-                return;
-            }
+                int productId = int.Parse(txtProductID.Text);
+                if (Product.Exists(productId)) // Assuming you have an Exists method in your Product class
+                {
+                    MessageBox.Show("A product with this ID already exists. Please enter a unique Product ID.");
+                    return;
+                }
                 // Ensure that the necessary fields are not empty
                 if (string.IsNullOrEmpty(txtProductID.Text) ||
                     string.IsNullOrEmpty(txtProductName.Text) ||

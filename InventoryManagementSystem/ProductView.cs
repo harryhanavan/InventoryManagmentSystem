@@ -94,6 +94,8 @@ namespace InventoryManagementSystem
         {
             switch (selectedPriceRange)
             {
+                case "All":
+                    return true; // No price filter
                 case "Below $50":
                     return price < 50;
                 case "$50 - $100":

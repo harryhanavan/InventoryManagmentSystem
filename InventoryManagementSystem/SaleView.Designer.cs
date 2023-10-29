@@ -40,7 +40,7 @@
             // dataGridViewSales
             // 
             dataGridViewSales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewSales.Location = new Point(7, 38);
+            dataGridViewSales.Location = new Point(83, 181);
             dataGridViewSales.Name = "dataGridViewSales";
             dataGridViewSales.RowTemplate.Height = 25;
             dataGridViewSales.Size = new Size(472, 218);
@@ -49,24 +49,24 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(404, 262);
+            btnBack.Location = new Point(3, 3);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(75, 23);
             btnBack.TabIndex = 9;
-            btnBack.Text = "Back";
+            btnBack.Text = "< Back";
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(88, 9);
+            searchTextBox.Location = new Point(164, 152);
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(310, 23);
             searchTextBox.TabIndex = 8;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(404, 9);
+            btnSearch.Location = new Point(480, 152);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 7;
@@ -76,7 +76,7 @@
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(7, 9);
+            btnRefresh.Location = new Point(83, 152);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(75, 23);
             btnRefresh.TabIndex = 6;
@@ -88,7 +88,7 @@
             // 
             listBoxSaleItems.FormattingEnabled = true;
             listBoxSaleItems.ItemHeight = 15;
-            listBoxSaleItems.Location = new Point(540, 38);
+            listBoxSaleItems.Location = new Point(616, 181);
             listBoxSaleItems.Name = "listBoxSaleItems";
             listBoxSaleItems.Size = new Size(365, 214);
             listBoxSaleItems.TabIndex = 11;
@@ -104,7 +104,7 @@
             Controls.Add(btnSearch);
             Controls.Add(btnRefresh);
             Name = "SaleView";
-            Size = new Size(975, 345);
+            Size = new Size(1080, 540);
             ((System.ComponentModel.ISupportInitialize)dataGridViewSales).EndInit();
             ResumeLayout(false);
             PerformLayout();

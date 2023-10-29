@@ -38,7 +38,7 @@
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(16, 8);
+            btnRefresh.Location = new Point(145, 135);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(75, 23);
             btnRefresh.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(692, 8);
+            btnSearch.Location = new Point(821, 135);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 2;
@@ -58,25 +58,25 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(586, 9);
+            textBox1.Location = new Point(715, 136);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 3;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(692, 261);
+            btnBack.Location = new Point(3, 3);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(75, 23);
             btnBack.TabIndex = 4;
-            btnBack.Text = "Back";
+            btnBack.Text = "< Back";
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
             // dataGridViewSuppliers
             // 
             dataGridViewSuppliers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewSuppliers.Location = new Point(16, 37);
+            dataGridViewSuppliers.Location = new Point(145, 164);
             dataGridViewSuppliers.Name = "dataGridViewSuppliers";
             dataGridViewSuppliers.RowTemplate.Height = 25;
             dataGridViewSuppliers.Size = new Size(751, 218);
@@ -92,7 +92,7 @@
             Controls.Add(btnSearch);
             Controls.Add(btnRefresh);
             Name = "SupplierView";
-            Size = new Size(781, 320);
+            Size = new Size(1080, 540);
             ((System.ComponentModel.ISupportInitialize)dataGridViewSuppliers).EndInit();
             ResumeLayout(false);
             PerformLayout();

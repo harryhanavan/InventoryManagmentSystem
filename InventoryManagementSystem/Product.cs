@@ -8,13 +8,13 @@ namespace InventoryManagementSystem
 {
     public enum ProductCategory
     {
+        All,
         Laptop,
         Smartphone,
         Tablet,
         Accessories,
         Audio,
         Wearables
-        // Add more categories as needed
     }
     public class Product
     {
