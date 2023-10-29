@@ -34,7 +34,7 @@
             cmbCategory = new ComboBox();
             label1 = new Label();
             label2 = new Label();
-            comboBox1 = new ComboBox();
+            cmbPrice = new ComboBox();
             label3 = new Label();
             label4 = new Label();
             cmbSupplier = new ComboBox();
@@ -72,7 +72,6 @@
             // cmbCategory
             // 
             cmbCategory.FormattingEnabled = true;
-            cmbCategory.Items.AddRange(new object[] { "Electronics", "Clothing", "Groceries" });
             cmbCategory.Location = new Point(12, 101);
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(121, 23);
@@ -96,14 +95,14 @@
             label2.TabIndex = 5;
             label2.Text = "Filter by:";
             // 
-            // comboBox1
+            // cmbPrice
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Below $50", "$50 - $100", "$100 - $150", "$150-$300", "$300+" });
-            comboBox1.Location = new Point(159, 100);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 6;
+            cmbPrice.FormattingEnabled = true;
+            cmbPrice.Items.AddRange(new object[] { "Below $50", "$50 - $100", "$100 - $150", "$150-$300", "$300+" });
+            cmbPrice.Location = new Point(159, 100);
+            cmbPrice.Name = "cmbPrice";
+            cmbPrice.Size = new Size(121, 23);
+            cmbPrice.TabIndex = 6;
             // 
             // label3
             // 
@@ -155,13 +154,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(btnback);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(cmbSupplier);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbPrice);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(cmbCategory);
@@ -169,7 +167,7 @@
             Controls.Add(btnSearch);
             Controls.Add(dataGridViewProducts);
             Name = "ProductView";
-            Text = "ProductView";
+            Size = new Size(800, 450);
             Load += ProductView_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).EndInit();
             ResumeLayout(false);
@@ -184,7 +182,7 @@
         private ComboBox cmbCategory;
         private Label label1;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox cmbPrice;
         private Label label3;
         private Label label4;
         private ComboBox cmbSupplier;

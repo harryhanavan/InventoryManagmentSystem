@@ -28,15 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             btnAddForm = new Button();
             btnEditForm = new Button();
             btnViewProducts = new Button();
             btnBack = new Button();
             ProductChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            productBindingSource = new BindingSource(components);
+            label5 = new Label();
+            label4 = new Label();
+            cmbSupplier = new ComboBox();
+            label3 = new Label();
+            comboBox1 = new ComboBox();
+            label2 = new Label();
+            label1 = new Label();
+            cmbCategory = new ComboBox();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
             ((System.ComponentModel.ISupportInitialize)ProductChart).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             SuspendLayout();
             // 
             // btnAddForm
@@ -85,20 +98,121 @@
             ProductChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             ProductChart.Legends.Add(legend1);
-            ProductChart.Location = new Point(17, 13);
+            ProductChart.Location = new Point(16, 101);
             ProductChart.Name = "ProductChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            ProductChart.Series.Add(series1);
-            ProductChart.Size = new Size(746, 300);
+            ProductChart.Size = new Size(781, 233);
             ProductChart.TabIndex = 5;
             ProductChart.Text = "chart1";
+            title1.Name = "Title1";
+            title1.Text = "Product Stock Levles";
+            ProductChart.Titles.Add(title1);
+            // 
+            // productBindingSource
+            // 
+            productBindingSource.DataSource = typeof(Product);
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(540, 46);
+            label5.Name = "label5";
+            label5.Size = new Size(166, 15);
+            label5.TabIndex = 20;
+            label5.Text = "Search by Product ID or Name";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(375, 46);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 15);
+            label4.TabIndex = 19;
+            label4.Text = "Supplier";
+            // 
+            // cmbSupplier
+            // 
+            cmbSupplier.FormattingEnabled = true;
+            cmbSupplier.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbSupplier.Location = new Point(341, 64);
+            cmbSupplier.Name = "cmbSupplier";
+            cmbSupplier.Size = new Size(121, 23);
+            cmbSupplier.TabIndex = 18;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(236, 46);
+            label3.Name = "label3";
+            label3.Size = new Size(33, 15);
+            label3.TabIndex = 17;
+            label3.Text = "Price";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Below $50", "$50 - $100", "$100 - $150", "$150-$300", "$300+" });
+            comboBox1.Location = new Point(190, 63);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 16;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(190, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(52, 15);
+            label2.TabIndex = 15;
+            label2.Text = "Filter by:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(73, 46);
+            label1.Name = "label1";
+            label1.Size = new Size(55, 15);
+            label1.TabIndex = 14;
+            label1.Text = "Category";
+            // 
+            // cmbCategory
+            // 
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new Point(43, 64);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(121, 23);
+            cmbCategory.TabIndex = 13;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(532, 64);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(174, 23);
+            txtSearch.TabIndex = 12;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(712, 63);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(75, 23);
+            btnSearch.TabIndex = 11;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // ProductManagementForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(cmbSupplier);
+            Controls.Add(label3);
+            Controls.Add(comboBox1);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(cmbCategory);
+            Controls.Add(txtSearch);
+            Controls.Add(btnSearch);
             Controls.Add(ProductChart);
             Controls.Add(btnBack);
             Controls.Add(btnViewProducts);
@@ -108,7 +222,9 @@
             Size = new Size(800, 450);
             Load += ProductManagementForm_Load;
             ((System.ComponentModel.ISupportInitialize)ProductChart).EndInit();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -118,5 +234,16 @@
         private Button btnViewProducts;
         private Button btnBack;
         private System.Windows.Forms.DataVisualization.Charting.Chart ProductChart;
+        private BindingSource productBindingSource;
+        private Label label5;
+        private Label label4;
+        private ComboBox cmbSupplier;
+        private Label label3;
+        private ComboBox comboBox1;
+        private Label label2;
+        private Label label1;
+        private ComboBox cmbCategory;
+        private TextBox txtSearch;
+        private Button btnSearch;
     }
 }
